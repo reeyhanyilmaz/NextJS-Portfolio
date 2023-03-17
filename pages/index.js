@@ -85,20 +85,70 @@ export default function Home() {
       {/* portfolio */}
       <div
         id="portfolio"
-        className="flex flex-column justify-center items-center p-20 text-xl"
+        className="flex justify-center items-center p-20 text-xl"
       >
         {/* <p>&lt;portfolio /&gt;</p> */}
-        <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+        <div class="flex flex-wrap justify-center mt-10">
           {project.map((item) => {
             return (
-              <Box key={item.id} className="bg-white rounded p-3">
-                <Text>{item.name}</Text>
-                <Text className="text-sm">{item.technology}</Text>
-               <SocialIcon url={`${item.github}`} />
-              </Box>
+              <div key={item.id} class="p-4 max-w-sm w-64">
+                <div class="flex rounded-lg h-full bg-slate-100 text-black  p-8 flex-col">
+                  <div class="flex items-center mb-3">
+                    <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                      </svg>
+                    </div>
+                    <h2 class="text-lg font-medium">{item.name}</h2>
+                  </div>
+                  <div class="flex flex-col justify-between flex-grow">
+                    <p class="leading-relaxed text-base ">
+                      {item.technology}
+                    </p>
+                    <a
+                      href="#"
+                      class="mt-3 text-black hover:text-blue-600 inline-flex items-center"
+                    >
+                      Learn More
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div className="grid gap-2 grid-cols-2">
+                    <SocialIcon
+                      url={`${item.github}`}
+                      style={{ height: 25, width: 25 }}
+                    />
+                    <SocialIcon
+                      url={`${item.url}`}
+                      label="Our portfolio"
+                      style={{ height: 25, width: 25 }}
+                      // bgColor="#ff5a01"
+                    />
+                  </div>
+                </div>
+              </div>
             );
           })}
-        </Grid>
+        </div>
       </div>
 
       {/* contact */}

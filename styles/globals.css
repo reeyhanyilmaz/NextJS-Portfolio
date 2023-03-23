@@ -19,7 +19,7 @@
     /* box-shadow: 0 3px 3px #ccc; */
     padding: 10px;
   }
-  
+
   .back-to-top:hover {
     box-shadow: 0 3px 3px #ccc;
   }
@@ -27,16 +27,18 @@
   body{
     background-color: black !important;
     font-family: Poppins, sans-serif;
+    color:#242120;
   }
 
   .container {
-    background-color: beige;
+    background-color: white;
     transform-origin: 0% 0%;
     transition: transform 250ms ease-in-out;
+    width: 100vw;
   }
 
   /* hamburger acık */
-  .container.open{
+  .container.open, .icons.open{
     transform: rotate(-20deg);
   }
 
@@ -49,7 +51,7 @@
   }
 
   /* hamburger kapalı */
-  .container.close{
+  .container.close , .icons.close{
     transform: rotate(0deg);
     z-index:1 ;
   }
@@ -60,6 +62,41 @@
 
   .cross.close{
     transform: rotate(90deg);
+  }
+
+  /* tag styles */
+  .h1, .html, .body, .form , .p{
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .html{
+    margin-left: 6rem;
+  }
+
+  .body{
+    margin-left: 8rem;
+  }
+
+  .h1 , .p{
+    margin-left: 10rem;
+  }
+
+  .form{
+    margin-left: 11rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .html{
+      margin-left: 1rem;
+    }
+
+    .body{
+      margin-left: 1.7rem;
+    }
+    
+    .h1, .p {
+      margin-left: 2rem;
+    }
   }
 
   

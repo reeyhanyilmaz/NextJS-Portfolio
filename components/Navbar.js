@@ -1,28 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
 import "../styles/navbar.css";
-import { useState } from "react";
-import Home from "../pages/index"
+import {useSelector, useDispatch} from "react-redux";
+import { setIsHamOpen } from "../redux/portfolioSlice";
+import { SocialIcon } from "react-social-icons";
 
-function Navbar({children}) {
-  const [isHamOpen, setIsHamOpen] = useState(false);
+function Navbar() {
+  const isHamOpen = useSelector((state) => state.portfolio.isHamOpen)
+  const dispatch = useDispatch();
 
   const handleClick = () =>{
-    setIsHamOpen((prev) => !prev);
+    dispatch(setIsHamOpen());
   }
-
-  // const router = useRouter();
-  // const style = {
-  //   marginRight: 10,
-  //   color: router.asPath === href ? 'red' : 'black',
-  // }
-
-  // const handleClick = (e) => {
-  //     e.preventDefault()
-  //     router.push(href)
-  //   }
 
   return (
     <div>
@@ -41,60 +30,29 @@ function Navbar({children}) {
       <ul>
         <li>
           <i className="fa-solid fa-house"></i>
-          <Link href="/"> .about() </Link>
+          <Link href="/"> <p> .about() </p> </Link>
         </li>
         <li>
           <i className="fa-solid fa-user"></i>
-          <Link href="/projects"> .projects() </Link>
+          <Link href="/projects"> <p> .projects() </p>  </Link>
         </li>
         <li>
           <i className="fa-solid fa-envelope"></i>
-          <Link href="/contact">.contact()</Link>
+          <Link href="/contact"> <p> .contact() </p></Link>
         </li>
         <li>
-          <i className="fa-solid fa-envelope"></i>
-          <Link href="/blog">.blog()</Link>
+        <i class="fa-duotone fa-feather"></i>
+          <Link href="/blog"> <p> .blog() </p></Link>
         </li>
       </ul>
 
-      {children}
-
-      {/* <Home isHamOpen={isHamOpen} /> */}
-
-      {/* <div className={`container ${isHamOpen ? "open" : "close"}`}>
-        <div className="content">
-          <h1>Puppies</h1>
-          <h3>Satvik Popli</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
-            inventore iusto quam. Fugiat ut ducimus ratione nostrum dolor nobis,
-            error doloremque veritatis, molestiae a molestias earum aspernatur,
-            rem quasi maiores! Animi aperiam hic quis minus itaque, nihil,
-            dolorem beatae explicabo unde qui officiis facilis ducimus expedita
-            illum repellat, esse quos quas sapiente! In, vel ipsam corporis
-            fugit odio corrupti quae.
-          </p>
-          <Image
-            src="/assets/my_photo.jpeg"
-            alt="doggo"
-            width={1000}
-            height={500}
-          />
-          <p>
-            Sit, unde? Modi perspiciatis officia labore, repellendus, voluptates
-            laboriosam dolor non repellat consectetur esse error ab nesciunt,
-            obcaecati minima nihil! Ad maxime corporis distinctio voluptates
-            deserunt consequatur. Pariatur, nisi accusamus? Eum dolores eius
-            dolorum at ipsa, mollitia, ducimus minima nesciunt provident natus
-            asperiores, hic eaque earum impedit? Dicta culpa aliquid, iste quia
-            ut rem corrupti tempora, provident facilis fuga cupiditate.
-            Voluptatibus quia eos itaque eveniet distinctio temporibus inventore
-            velit sunt odit, maxime cupiditate possimus cum, voluptatum
-            molestiae beatae unde! Libero consequuntur distinctio officia
-            voluptatum magni natus exercitationem voluptatem nemo nihil.
-          </p>
-        </div>
-      </div> */}
+     
+       {/* contact */}
+      <div id="contact" className={`icons ${isHamOpen ? "open" : "close"}`}>
+        <SocialIcon url="https://linkedin.com/in/reeyhanyilmaz" />
+        <SocialIcon url="https://github.com/reeyhanyilmaz" />
+        <SocialIcon url="https://discord.com/channels/818433563858567178/818433563858567181" />
+      </div>
     </div>
   );
 }

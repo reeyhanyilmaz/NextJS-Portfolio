@@ -30,7 +30,7 @@
 ul {
   position: absolute;
   color: white;
-  bottom: 10px;
+  bottom: 40px;
   list-style: none;
 }
 
@@ -66,4 +66,15 @@ li:nth-of-type(3) {
 
 li:nth-of-type(4) {
   margin-left: 6.75rem;
+}
+
+/* contact icon */
+#contact{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 1;
 }

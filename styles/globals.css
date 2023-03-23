@@ -2,21 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
 /*scroll button*/
 .back-to-top {
     position: fixed;
     bottom: 33px;
     right: 100px;
     font-size: 17px;
-    background: #84A59D;
+    background:  rgb(161, 166, 252);
     color: white;
     cursor: pointer;
     border-radius: 50%;
     border: none;
-    box-shadow: 0 3px 3px #ccc;
+    /* box-shadow: 0 3px 3px #ccc; */
     padding: 10px;
   }
   
   .back-to-top:hover {
-    background: #c0b9dd;
+    box-shadow: 0 3px 3px #ccc;
   }
+
+  body{
+    background-color: black !important;
+    font-family: Poppins, sans-serif;
+  }
+
+  .container {
+    background-color: beige;
+    transform-origin: 0% 0%;
+    transition: transform 250ms ease-in-out;
+  }
+
+  /* hamburger acık */
+  .container.open{
+    transform: rotate(-20deg);
+  }
+
+  .ham.open{
+    transform: rotate(-90deg);
+  }
+
+  .cross.open{
+    transform: rotate(0deg);
+  }
+
+  /* hamburger kapalı */
+  .container.close{
+    transform: rotate(0deg);
+    z-index:1 ;
+  }
+
+  .ham.close{
+    transform: rotate(0deg);
+  }
+
+  .cross.close{
+    transform: rotate(90deg);
+  }
+
+  
+
+

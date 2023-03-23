@@ -1,13 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import { Col, Container, Row, Navbar, Form } from "react-bootstrap";
 import { Button } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
-import  "../styles/contact.css";
+import "../styles/contact.css";
+import { Icon } from "@iconify/react";
 
 export default function Contact() {
   // Initialize our states
@@ -81,19 +83,19 @@ export default function Contact() {
           </Link>
         </Navbar.Brand>
       </Navbar> */}
-      <Container className="flex flex-column">
-        {!isSubmitted ? (
-          <>
-            <p>&lt;html&gt;</p>
-            <p>&lt;body&gt;</p>
+      {/* <Container className="flex flex-column"> */}
+      {!isSubmitted ? (
+        <>
+          <p>&lt;html&gt;</p>
+          <p>&lt;body&gt;</p>
 
-            <p>&lt;h1&gt;</p>
-            <h1 className="mb-5">
-              If you want to get in touch, please fill out the form
-            </h1>
-            <p>&lt;h1 /&gt;</p>
-            <p>&lt;form&gt;</p>
-            <Form onSubmit={handleSubmit((data) => submitForm(data))}>
+          <p>&lt;h1&gt;</p>
+          <h1 className="mb-5">
+            If you want to get in touch, please fill out the form
+          </h1>
+          <p>&lt;h1 /&gt;</p>
+          <p>&lt;form&gt;</p>
+          {/* <Form onSubmit={handleSubmit((data) => submitForm(data))}>
               <Row>
                 <Col>
                   <Form.Group className="mb-3" controlId="nameField">
@@ -150,53 +152,136 @@ export default function Contact() {
                   </Button>
                 </Col>
               </Row>
-            </Form>
+            </Form> */}
 
+          <main class="flexbox-col">
+            <div class="form-wrapper">
+              <Form
+                id="form"
+                name="emailform"
+                onSubmit={handleSubmit((data) => submitForm(data))}
+              >
+                {/* <p class="form-undertitle">Fields marked "*" are required.</p> */}
+                <div class="form-input-grid" >
+                  <div controlId="nameField">
+                    <p class="form-text">Username*</p>
+                    <div class="form-input-wrapper flexbox-left">
+                      {/* <i class="uil uil-user"></i> */}
+                      {/* <Icon
+                        icon="fluent-mdl2:profile-search"
+                        color="#a1a6fc"
+                        className="uil uil-user"
+                      /> */}
+                      <input
+                        class="form-input"
+                        id="uname"
+                        name="uname"
+                        type="text"
+                        placeholder="Username"
+                        aria-label=""
+                        required
+                        isInvalid={errors.name}
+                        {...register("name")}
+                      />
+                    </div>
+                  </div>
+                  {/* <p type="invalid"> {errors.name?.message}</p> */}
+                  {/* <div>
+                    <p class="form-text">Password*</p>
+                    <div class="form-input-wrapper flexbox-left">
+                      <i class="uil uil-asterisk"></i>
+                      <input
+                        class="form-input"
+                        id="pword"
+                        name="pword"
+                        type="password"
+                        placeholder="Password"
+                        aria-label=""
+                        required
+                      />
+                    </div>
+                  </div> */}
 
+                  <div class="form-input-max" controlId="emailField">
+                    <p class="form-text">Email*</p>
+                    <div class="form-input-wrapper flexbox-left">
+                      <i class="uil uil-at"></i>
+                      <input
+                        class="form-input"
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Email"
+                        aria-label=""
+                        required
+                        isInvalid={errors.email}
+                        {...register("email")}
+                      />
+                    </div>
+                  </div>
+                  {/* <p type="invalid"> {errors.email?.message}</p> */}
+                </div>
 
+                <div class="form-input-max" controlId="messageField">
+                  <div class="form-text">Message* (Max 500)</div>
+                  <div
+                    id="textarea"
+                    class="form-input-wrapper flexbox-left-start"
+                  >
+                    <i class="uil uil-comment-dots"></i>
+                    <textarea
+                      class="form-input"
+                      id="message"
+                      name="message"
+                      placeholder="Please type your message..."
+                      maxlength="500"
+                      aria-label=""
+                      required
+                      isInvalid={errors.message}
+                      {...register("message")}
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-input-max flexbox-left">
+                  <div class="button-wrapper">
+                    <button
+                      id="form-button"
+                      type="submit"
+                      class="button btn-primary"
+                      // disabled={isSubmitting}
+                    >
+                      <i class="uil uil-envelope-heart"></i>  {isSubmitting ? "Sending..." : "Submit"}
+                      <div class="btn-secondary"></div>
+                    </button>
+                  </div>
+                </div>
+              </Form>
+            </div>
+          </main>
 
-{/* 
-            <div class='bold-line'></div>
-<div class='container'>
-  <div class='window'>
-    <div class='overlay'></div>
-    <div class='content'>
-      <div class='welcome'>Hello There!</div>
-      <div class='subtitle'>We are almost done. Before using our services you need to create an account.</div>
-      <div class='input-fields'>
-        <input type='text' placeholder='Username' class='input-line full-width'></input>
-        <input type='email' placeholder='Email' class='input-line full-width'></input>
-        <input type='password' placeholder='Password' class='input-line full-width'></input>
+          <p>&lt;form /&gt;</p>
+          <p>&lt;body /&gt;</p>
+          <p>&lt;html/&gt;</p>
+        </>
+      ) : (
+        <>
+          <p>&lt;html&gt;</p>
+          <p>&lt;body&gt;</p>
 
-      </div>
-      <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
-      <div><button class='ghost-round full-width'>Create Account</button></div>
-    </div>
-  </div>
-</div> */}
-            <p>&lt;form /&gt;</p>
-            <p>&lt;body /&gt;</p>
-            <p>&lt;html/&gt;</p>
-          </>
-        ) : (
-          <>
-            <p>&lt;html&gt;</p>
-            <p>&lt;body&gt;</p>
-
-            <p>&lt;h1&gt;</p>
-            <h1>Thank you!</h1>
-            <p>&lt;h1 /&gt;</p>
-            <p>&lt;p&gt;</p>
-            <p>
-              Your message has been received. Please check your email for
-              confirmation.
-            </p>
-            <p>&lt;p /&gt;</p>
-            <p>&lt;body /&gt;</p>
-            <p>&lt;html/&gt;</p>
-          </>
-        )}
-      </Container>
+          <p>&lt;h1&gt;</p>
+          <h1>Thank you!</h1>
+          <p>&lt;h1 /&gt;</p>
+          <p>&lt;p&gt;</p>
+          <p>
+            Your message has been received. Please check your email for
+            confirmation.
+          </p>
+          <p>&lt;p /&gt;</p>
+          <p>&lt;body /&gt;</p>
+          <p>&lt;html/&gt;</p>
+        </>
+      )}
+      {/* </Container> */}
     </>
   );
 }

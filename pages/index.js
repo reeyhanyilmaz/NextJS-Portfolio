@@ -1,62 +1,53 @@
 import Image from "next/image";
 import Head from "next/head";
 import "../styles/index.css";
-import { SocialIcon } from "react-social-icons";
 import { Grid, Box, Text } from "@chakra-ui/react";
 import { LinkIcon, InfoOutlineIcon, Button } from "@chakra-ui/icons";
 import Layout from "../components/Layout";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Home() {
+  const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
+
   return (
-    <div className="main">
+    <div
+      className={`container py-20 min-w-full ${isHamOpen ? "open" : "close"}`}
+    >
       <Head>
         <title>Reyhan Yılmaz</title>
       </Head>
-      <p>&lt;html&gt;</p>
-      <p>&lt;body&gt;</p>
 
-      <div id="about" className="container">
-        <div className="main2">
-          <div className="infoContainer">
-            <div className="devInfo">
-              <p>&lt;h1&gt;</p>
-              <div className="hello slideLeft">Hi I am</div>
-              <div className="name slideLeft">Reyhan</div>
-              <div className="about slideLeft">Frontend Developer</div>
-              <p>&lt;h1 /&gt;</p>
-              <div className="moreAbout slideLeft w-1/2">
-                <p>&lt;p&gt;</p>I finished my undergraduate education as a
-                chemist. I became a frontend developer by making a career
-                change. Writing code makes me happy. I am currently working as a
-                front end developer at Hype.
-                <p>&lt;p /&gt;</p>
-              </div>
+      <div id="about" className="content">
+        <p className="html">&lt;html&gt;</p>
+        <p className="body">&lt;body&gt;</p>
+        <div className="infoContainer">
+          <div className="devInfo">
+            <p className="h1">&lt;h1&gt;</p>
+            <div className="hello slideLeft">Hi,I&#39;m Reyhan</div>
+            {/* <div className="name slideLeft">Reyhan</div> */}
+            <div className="about slideLeft">Frontend Developer</div>
+            <p className="h1">&lt;h1 /&gt;</p>
+            <p className="p mt-5">&lt;p&gt;</p>
+            <div className="moreAbout slideLeft md:w-1/2">
+              <p>I finished my undergraduate education as a chemist. </p>
+              <p>I became a
+              frontend developer by making a career change. </p>
+              <p>I am currently working as a frontend developer and developing projects.</p>
             </div>
+            <p className="p mt-5">&lt;p /&gt;</p>
+          </div>
 
-            <div className="devPic slideLeft">
-              <Image
-                src="/my_photo.jpeg"
-                alt="my_photo"
-                width="600"
-                height="300"
-              />
-            </div>
+          <div className="devPic slideLeft mt-5 flex justify-content ">
+            <Image
+              src="/my_photo.jpeg"
+              alt="my_photo"
+              width="300"
+              height="300"
+            />
           </div>
         </div>
-      </div>
-      <p>&lt;body /&gt;</p>
-      <p>&lt;html/&gt;</p>
-
-      {/* contact */}
-      <div
-        id="contact"
-        className="flex flex-row justify-center items-center p-20 gap-x-4 text-3xl"
-      >
-        {/* <p><SocialIcon url="https://mail.google.com/reeyhanyilmaz@gmail.com" /></p> */}
-
-        <SocialIcon url="https://linkedin.com/in/reeyhanyilmaz" />
-        <SocialIcon url="https://github.com/reeyhanyilmaz" />
-        <SocialIcon url="https://discord.com/channels/818433563858567178/818433563858567181" />
+        <p className="body">&lt;body /&gt;</p>
+        <p className="html">&lt;html/&gt;</p>
       </div>
     </div>
   );

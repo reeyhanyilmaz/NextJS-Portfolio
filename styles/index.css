@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Code+Pro:wght@300&display=swap');
+
+.infoContainer {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.devInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hello {
+    font-size: 65px;
+    margin-left: 10rem;
+}
+
+.name {
+    font-size: 60px;
+    font-weight: bold;
+    opacity: 0;
+    margin-left: 10rem;
+}
+
+.about {
+    font-size: 35px;
+    opacity: 0;
+    margin-left: 10rem;
+}
+
+.moreAbout {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 500;
+    opacity: 0;
+}
+
+@media only screen and (width > 1200px) {
+    .moreAbout {
+        margin-left: 10rem;
+    }
+
+    .infoContainer{
+        padding: 20px 10px;
+    }
+}
+
+@media only screen and (width < 768px) {
+    .content{
+        padding: 20px 10px 0 10px;
+    }
+
+    .hello,
+    .name,
+    .about,
+    .moreAbout {
+        margin-left: 2rem;
+    }
+
+    .hello {
+        font-size: 40px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .about {
+        font-size: 25px;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+    }
+
+    .devPic.slideLeft {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* Animation */
+.slideLeft {
+    animation: slide-left 1s linear forwards;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translate(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+/* home page delay */
+.name.slideLeft {
+    animation-delay: 0.5s;
+}
+
+.about.slideLeft {
+    animation-delay: 1s;
+}
+
+.moreAbout.slideLeft {
+    animation-delay: 1.5s;
+}
+
+/* .devPic.slideLeft{
+    animation-delay: 2s;
+} */

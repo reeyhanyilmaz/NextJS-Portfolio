@@ -10,11 +10,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import "../styles/contact.css";
 import { Icon } from "@iconify/react";
+import {useSelector} from "react-redux";
 
 export default function Contact() {
   // Initialize our states
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const isHamOpen = useSelector((state) => state.portfolio.isHamOpen);//state
 
   // Yup error message overrides
   const errMess = {
@@ -72,97 +74,29 @@ export default function Contact() {
   };
 
   return (
-    <>
+    <div className={`flex flex-col py-20 justify-center align-center min-w-full container ${isHamOpen ? "open" : "close"}`}>
       <Head>
         <title>RY | Contact</title>
       </Head>
-      {/* <Navbar bg="dark" expand="lg">
-        <Navbar.Brand>
-          <Link href="/">
-            Home
-          </Link>
-        </Navbar.Brand>
-      </Navbar> */}
-      {/* <Container className="flex flex-column"> */}
       {!isSubmitted ? (
-        <>
-          <p>&lt;html&gt;</p>
-          <p>&lt;body&gt;</p>
+        <div >
+          <p className="html">&lt;html&gt;</p>
+          <p className="body">&lt;body&gt;</p>
 
-          <p>&lt;h1&gt;</p>
-          <h1 className="mb-5">
+          {/* <p className="h1 mt-5">&lt;h1&gt;</p>
+          <h1 className="mb-5 text-center">
             If you want to get in touch, please fill out the form
           </h1>
-          <p>&lt;h1 /&gt;</p>
-          <p>&lt;form&gt;</p>
-          {/* <Form onSubmit={handleSubmit((data) => submitForm(data))}>
-              <Row>
-                <Col>
-                  <Form.Group className="mb-3" controlId="nameField">
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="e.g. John Doe"
-                      isInvalid={errors.name}
-                      {...register("name")}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.name?.message}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </Col>
-                <Col>
-                  <Form.Group className="mb-3" controlId="emailField">
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="e.g. john@example.com"
-                      isInvalid={errors.email}
-                      {...register("email")}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.email?.message}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </Col>
-                <Col lg={12}>
-                  <Form.Group className="mb-3" controlId="messageField">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control
-                      as="textarea"
-                      rows={5}
-                      placeholder="Please type your message..."
-                      isInvalid={errors.message}
-                      {...register("message")}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.message?.message}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Sending..." : "Submit"}
-                  </Button>
-                </Col>
-              </Row>
-            </Form> */}
-
+          <p className="h1">&lt;h1 /&gt;</p> */}
+          <p className="form mb-5">&lt;form&gt;</p>
           <main class="flexbox-col">
             <div class="form-wrapper">
-              <Form
+              <form
                 id="form"
                 name="emailform"
                 onSubmit={handleSubmit((data) => submitForm(data))}
               >
-                {/* <p class="form-undertitle">Fields marked "*" are required.</p> */}
-                <div class="form-input-grid" >
+                <div class="form-input-grid">
                   <div controlId="nameField">
                     <p class="form-text">Username*</p>
                     <div class="form-input-wrapper flexbox-left">
@@ -172,6 +106,7 @@ export default function Contact() {
                         color="#a1a6fc"
                         className="uil uil-user"
                       /> */}
+                      <Icon icon="uil:user" className="icon"/>
                       <input
                         class="form-input"
                         id="uname"
@@ -185,27 +120,11 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  {/* <p type="invalid"> {errors.name?.message}</p> */}
-                  {/* <div>
-                    <p class="form-text">Password*</p>
-                    <div class="form-input-wrapper flexbox-left">
-                      <i class="uil uil-asterisk"></i>
-                      <input
-                        class="form-input"
-                        id="pword"
-                        name="pword"
-                        type="password"
-                        placeholder="Password"
-                        aria-label=""
-                        required
-                      />
-                    </div>
-                  </div> */}
 
                   <div class="form-input-max" controlId="emailField">
                     <p class="form-text">Email*</p>
                     <div class="form-input-wrapper flexbox-left">
-                      <i class="uil uil-at"></i>
+                    <Icon icon="uil:at" className="icon" />
                       <input
                         class="form-input"
                         id="email"
@@ -219,16 +138,15 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  {/* <p type="invalid"> {errors.email?.message}</p> */}
                 </div>
 
                 <div class="form-input-max" controlId="messageField">
-                  <div class="form-text">Message* (Max 500)</div>
+                  <div class="form-text">Message* </div>
                   <div
                     id="textarea"
                     class="form-input-wrapper flexbox-left-start"
                   >
-                    <i class="uil uil-comment-dots"></i>
+                   <Icon icon="uil:comment-alt-heart" className="icon mt-5" />
                     <textarea
                       class="form-input"
                       id="message"
@@ -242,46 +160,52 @@ export default function Contact() {
                     ></textarea>
                   </div>
                 </div>
-                <div class="form-input-max flexbox-left">
-                  <div class="button-wrapper">
+                <div class="form-input-max flexbox-left ml-10">
+                  <div class="button-wrapper ">
                     <button
                       id="form-button"
                       type="submit"
-                      class="button btn-primary"
+                      class="button btn-primary flex flex-row justify-center items-center text-xl font-medium"
                       // disabled={isSubmitting}
                     >
-                      <i class="uil uil-envelope-heart"></i>  {isSubmitting ? "Sending..." : "Submit"}
+                      <Icon icon="uil:envelope-heart" className="text-4xl mr-3"/>
+                      {isSubmitting ? "Sending..." : "Submit"}
                       <div class="btn-secondary"></div>
                     </button>
                   </div>
                 </div>
-              </Form>
+              </form>
             </div>
           </main>
 
-          <p>&lt;form /&gt;</p>
-          <p>&lt;body /&gt;</p>
-          <p>&lt;html/&gt;</p>
-        </>
+          <p className="form mt-5" >&lt;form /&gt;</p>
+          <p className="body">&lt;body /&gt;</p>
+          <p className="html">&lt;html/&gt;</p>
+        </div>
       ) : (
-        <>
-          <p>&lt;html&gt;</p>
-          <p>&lt;body&gt;</p>
+        <div className="flex flex-col items-center justify-center">
+          <p className="html">&lt;html&gt;</p>
+          <p className="body">&lt;body&gt;</p>
 
-          <p>&lt;h1&gt;</p>
+          <p className="h1">&lt;h1&gt;</p>
           <h1>Thank you!</h1>
-          <p>&lt;h1 /&gt;</p>
-          <p>&lt;p&gt;</p>
-          <p>
-            Your message has been received. Please check your email for
-            confirmation.
-          </p>
-          <p>&lt;p /&gt;</p>
-          <p>&lt;body /&gt;</p>
-          <p>&lt;html/&gt;</p>
-        </>
+          <p className="h1">&lt;h1 /&gt;</p>
+          <p className="p">&lt;p&gt;</p>
+          <main class="flexbox-col">
+            <div class="form-wrapper">
+              <form id="form">
+                <p>
+                  Your message has been received. Please check your email for
+                  confirmation.
+                </p>
+              </form>
+            </div>
+          </main>
+          <p className="p">&lt;p /&gt;</p>
+          <p className="body">&lt;body /&gt;</p>
+          <p className="html">&lt;html/&gt;</p>
+        </div>
       )}
-      {/* </Container> */}
-    </>
+    </div>
   );
 }

@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Home() {
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
+  const activePage = useSelector((state) => state.portfolio.activePage);
 
   return (
     <div
@@ -23,26 +24,35 @@ export default function Home() {
         <div className="infoContainer">
           <div className="devInfo">
             <p className="h1">&lt;h1&gt;</p>
-            <div className="hello slideLeft">Hi,I&#39;m Reyhan</div>
+            <div className="hello slideLeft">Hi, I&#39;m Reyhan</div>
             {/* <div className="name slideLeft">Reyhan</div> */}
             <div className="about slideLeft">Frontend Developer</div>
             <p className="h1">&lt;h1 /&gt;</p>
             <p className="p mt-5">&lt;p&gt;</p>
-            <div className="moreAbout slideLeft md:w-1/2">
-              <p>I finished my undergraduate education as a chemist. </p>
-              <p>I became a
-              frontend developer by making a career change. </p>
-              <p>I am currently working as a frontend developer and developing projects.</p>
+            <div className="moreAbout slideLeft md:w-96">
+              <p>
+                I finished my undergraduate education as a chemist. I became a
+                frontend developer by making a career change. I am currently
+                working as a Frontend Developer.
+              </p>
+              <p></p>
+              <br />
+              <p>
+                I&#39;m developing projects with React, Next JS, TypeScript. As
+                styling, I use Bootstrap, Tailwind CSS , SCSS, Chakra-UI and
+                many libraries. I started learning in React Native and am
+                developing it.
+              </p>
             </div>
             <p className="p mt-5">&lt;p /&gt;</p>
           </div>
 
           <div className="devPic slideLeft mt-5 flex justify-content ">
             <Image
-              src="/my_photo.jpeg"
+              src="/assets/my_photo.jpeg"
               alt="my_photo"
-              width="300"
-              height="300"
+              width="500"
+              height="200"
             />
           </div>
         </div>

@@ -1,0 +1,95 @@
+#portfolio{
+    min-width: 100% !important;
+}
+
+.content{
+    margin-left: 11rem;
+}
+
+@media only screen and (width < 768px) {
+    .html{
+      margin-left: 1rem;
+    }
+
+    .body{
+      margin-left: 1.7rem;
+    }
+    
+    .content{
+      margin-left: 2rem;
+    }
+
+    .cards{
+        width: 300px;
+    }
+  }
+
+
+  #title {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .website{
+    color: #039be5;
+  }
+  
+  .icons {
+    font-size: 0.9rem;
+    display: inline-flex;
+    background: #D8D8D8;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+  }
+  .icons span {
+    border-radius: 5px;
+    padding: 3px 5px;
+  }
+  
+  .react {
+    background: #BAD5F5;
+  }
+  .react span::after {
+    content: "React.js";
+  }
+  
+  .nextjs{
+    background: #F2C986;
+  }
+  .nextjs span::after {
+    content: "Next JS";
+  }
+  
+  .redux{
+    background: #E1C1C1;
+  }
+  .redux span::after {
+    content: "Redux";
+  }
+  
+  .JavaScript {
+    background: #EADD86;
+  }
+  .JavaScript span::after {
+    content: "JavaScript";
+  }
+  
+  .typescript {
+    background: #AFEAE5;
+  }
+  .typescript span::after {
+    content: "TypeScript";
+  }
+  
+  .card a {
+    padding-right: 15px;
+  }
+  
+  .github {
+    color: #739150;
+  }
+  
+  .status {
+    color: #7699C2;
+  }

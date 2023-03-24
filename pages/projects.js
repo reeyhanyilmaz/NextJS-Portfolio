@@ -155,6 +155,18 @@ export default function Projects() {
       status: "Live",
     },
     {
+      project: "Memory Card Game",
+      stack: ["JavaScript"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://reeyhanyilmaz.github.io/JavaScript-MemoryCardGame/",
+      github: "https://github.com/reeyhanyilmaz/JavaScript-MemoryCardGame",
+      image:
+        "https://images.unsplash.com/photo-1588591795084-1770cb3be374?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      needs: "People with super powers",
+      status: "In Development",
+    },
+    {
       project: "Meditation App",
       stack: ["JavaScript"],
       description:
@@ -179,6 +191,18 @@ export default function Projects() {
       status: "Live",
     },
     {
+      project: "BMI Calculator",
+      stack: ["react", "typescript"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://reyhan-bmi-calculator.netlify.app/",
+      github: "https://github.com/reeyhanyilmaz/ReactTypeScript-BMICalculate",
+      needs: "People with super powers, semi-super powers, or no powers at all",
+      image:
+        "https://images.unsplash.com/photo-1618939291225-8d558ea4369f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      status: "Live",
+    },
+    {
       project: "Wheather App",
       stack: ["react"],
       description:
@@ -189,6 +213,18 @@ export default function Projects() {
         "https://images.unsplash.com/photo-1465577512280-1c2d41a79862?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1447&q=80",
       needs: "People with super powers",
       status: "In Development",
+    },
+    {
+      project: "Tip Calculator",
+      stack: ["JavaScript"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://reeyhanyilmaz.github.io/JavaScript-TipCalculator/",
+      github: "https://github.com/reeyhanyilmaz/JavaScript-TipCalculator",
+      needs: "People with super powers, semi-super powers, or no powers at all",
+      image:
+        "https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      status: "Live",
     },
     {
       project: "Spend Money App",
@@ -211,8 +247,56 @@ export default function Projects() {
       github: "https://github.com/reeyhanyilmaz/Redux-NotesApp",
       needs: "People with super powers, semi-super powers, or no powers at all",
       image:
-      // https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
+     
         "https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      status: "Live",
+    },
+    {
+      project: "Object Catching Game",
+      stack: ["JavaScript"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://reeyhanyilmaz.github.io/JavaScript-NesneYakalamaOyunu/",
+      github: "https://github.com/reeyhanyilmaz/JavaScript-NesneYakalamaOyunu",
+      needs: "People with super powers, semi-super powers, or no powers at all",
+      image:
+        "https://images.unsplash.com/photo-1611996575749-79a3a250f948?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      status: "Live",
+    },
+    {
+      project: "Rick And Morty App",
+      stack: ["react", "typescript"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://nextjs-typescript-rickandmorty.netlify.app/",
+      github: "https://github.com/reeyhanyilmaz/NextJSwithTypeScript-RickandMortyApp",
+      needs: "People with super powers, semi-super powers, or no powers at all",
+      image:
+        "https://images.unsplash.com/photo-1533518463841-d62e1fc91373?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      status: "Live",
+    },
+    {
+      project: "Todos App",
+      stack: ["react"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://reyhanyilmaz-todos.netlify.app/",
+      github: "https://github.com/reeyhanyilmaz/React-todos",
+      needs: "People with super powers, semi-super powers, or no powers at all",
+      image:
+        "https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      status: "Live",
+    },
+    {
+      project: "Color Flipper",
+      stack: ["JavaScript"],
+      description:
+        "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+      website: "https://reeyhanyilmaz.github.io/JavaScript-ColorFlipper//",
+      github: "https://github.com/reeyhanyilmaz/JavaScript-ColorFlipper",
+      needs: "People with super powers, semi-super powers, or no powers at all",
+      image:
+        "https://images.unsplash.com/photo-1541723011216-c57eaed19919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
       status: "Live",
     },
   ];
@@ -268,10 +352,10 @@ export default function Projects() {
                 </span>
                 <div>
                   <span>
-                    <a href={item.website} className="website">Website</a>
+                    <a href={item.website} className="website" target="_blank">Website</a>
                   </span>
                   <span>
-                    <a className="github" href={item.github}>
+                    <a className="github" href={item.github} target="_blank">
                       Github
                     </a>
                   </span>

@@ -9,6 +9,9 @@ import { useRouter } from "next/router";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 
+//materilize css
+import 'materialize-css/dist/css/materialize.min.css';
+
 function MyApp({ Component, pageProps }) {
   // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton] = useState(false);

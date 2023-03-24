@@ -9,24 +9,23 @@
 .back-to-top {
     position: fixed;
     bottom: 33px;
-    right: 100px;
+    right: 33px;
     font-size: 17px;
     background:  rgb(161, 166, 252);
     color: white;
     cursor: pointer;
     border-radius: 50%;
     border: none;
-    /* box-shadow: 0 3px 3px #ccc; */
     padding: 10px;
   }
 
-  .back-to-top:hover {
-    box-shadow: 0 3px 3px #ccc;
+  .back-to-top:hover, .back-to-top:focus {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   }
 
   body{
     background-color: black !important;
-    font-family: Poppins, sans-serif;
+    font-family: 'Source Code Pro', monospace !important;
     color:#242120;
   }
 
@@ -65,24 +64,26 @@
   }
 
   /* tag styles */
-  .h1, .html, .body, .form , .p{
+  .h1, .html, .body, .form , .p, .section{
     font-family: 'Source Code Pro', monospace;
+    color:#242120;
+    font-weight: 600;
   }
 
   .html{
-    margin-left: 6rem;
+    margin-left: 2rem;
   }
 
   .body{
-    margin-left: 8rem;
+    margin-left: 4rem;
   }
 
   .h1 , .p{
-    margin-left: 10rem;
+    margin-left: 5rem;
   }
 
-  .form{
-    margin-left: 11rem;
+  .form, .section{
+    margin-left: 6rem;
   }
 
   @media only screen and (max-width: 768px) {
@@ -94,7 +95,7 @@
       margin-left: 1.7rem;
     }
     
-    .h1, .p {
+    .h1, .p , .section{
       margin-left: 2rem;
     }
   }

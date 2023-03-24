@@ -158,12 +158,6 @@ textarea::-webkit-scrollbar-thumb {
     color: var(--white);
 }
 
-.form-text {
-    margin: 1em 0 .75em 2.2em;
-    color: var(--gray-dark);
-    font-weight: 300;
-}
-
 .form-input-grid {
     margin: 1.5em 0;
     display: grid;
@@ -171,29 +165,13 @@ textarea::-webkit-scrollbar-thumb {
     grid-column-gap: 1.5em;
 }
 
-/* .form-input-max {
-    margin: 1.5em 0;
-} */
-
 .form-input-wrapper {
     width: 100%;
     position: relative;
 }
 
-.form-input-wrapper i {
-    left: 1em;
-    position: absolute;
-    font-size: 1.88rem;
-    color: var(--primary);
-    text-shadow: 0 0 4px rgba(161, 166, 252, .5);
-}
-
 #textarea textarea {
     border-radius: 2.25em;
-}
-
-#textarea i {
-    top: .6em;
 }
 
 .form-input , .form-input1 {
@@ -216,19 +194,17 @@ textarea::-webkit-scrollbar-thumb {
     border: 2px solid var(--primary) !important;
 }
 
-/* #form-button {
-    font-size: 1.22rem;
-} */
-
 /* Button */
 .button-wrapper {
     margin: 2em 0 1em 0;
+    display: flex;
+    justify-content: center;  
 }
 
 .button,
 .btn-secondary {
     margin: 0;
-    width: 100%;
+    width: 20%;
     position: relative;
     padding: .7em 1.3em;
     letter-spacing: .1em;

@@ -25,12 +25,20 @@
 } */
 
 /* icons */
-.icon{
+.icon , .icon1{
     position: relative;
-    right: -60px;
     color: #a1a6fc;
     font-weight: 400;
     font-size: 40px;
+}
+
+.icon{
+    right: -70px;
+    margin-right: 5px;
+}
+
+.icon1{
+    right: -60px;
 }
 
 textarea {
@@ -188,24 +196,24 @@ textarea::-webkit-scrollbar-thumb {
     top: .6em;
 }
 
-.form-input {
-    width: 100%;
-    padding: 1.2em 1.2em 1.2em 3.6em;
-    font-size: 1.22rem;
-    border-radius: 5em;
-    box-shadow: 0 5px 20px 0 rgba(237, 232, 228, .8);
-    background-color: var(--bc-gray);
-    border: 2px solid var(--bc-gray);
-    transition: border .15s ease-in-out;
+.form-input , .form-input1 {
+    width: 100% !important;
+    padding: 1.2em 1.2em 1.2em 3.6em !important;
+    font-size: 1.22rem !important;
+    border-radius: 5em !important;
+    box-shadow: 0 5px 20px 0 rgba(237, 232, 228, .8) !important;
+    background-color: var(--bc-gray) !important;
+    border: 2px solid var(--bc-gray) !important;
+    transition: border .15s ease-in-out !important;
 }
 
-.form-input:hover {
-    border: 2px solid var(--primary);
+.form-input:hover , .form-input1:hover{
+    border: 2px solid var(--primary) !important;
 }
 
-.form-input:focus {
-    outline: none;
-    border: 2px solid var(--primary);
+.form-input:focus , .form-input1:focus {
+    outline: none !important;
+    border: 2px solid var(--primary) !important;
 }
 
 /* #form-button {

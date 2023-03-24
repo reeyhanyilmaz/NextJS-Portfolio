@@ -1,26 +1,65 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
-import { Col, Container, Row, Navbar, Form } from "react-bootstrap";
-import { Button } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import "../styles/contact.css";
 import { Icon } from "@iconify/react";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
+
+//chakra
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export default function Contact() {
   // Initialize our states
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [isSubmitted, setIsSubmitted] = React.useState(false);
-  const isHamOpen = useSelector((state) => state.portfolio.isHamOpen);//state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
+  const { onClose } = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+
+  //bu kısmı modal kapanınca inputlar boş olsun diye yazdım
+  const [inputName, setInputName] = useState("");
+  const [inputMail, setInputMail] = useState("");
+  const [inputMessage, setInputMessage] = useState("");
+
+  const handleInputName = (e) => {
+    setInputName(e.target.value);
+  };
+
+  const handleInputMail = (e) => {
+    setInputMail(e.target.value);
+  };
+
+  const handleInputMessage = (e) => {
+    setInputMessage(e.target.value);
+  };
 
   // Yup error message overrides
   const errMess = {
     req: "Please fill this out",
+  };
+
+  const handleClose = () => {
+    setIsSubmitted(false);
+    setInputName("");
+    setInputMail("");
+    setInputMessage("");
+    router.push("/contact");
   };
 
   // Our Yup Schema for this form
@@ -74,138 +113,124 @@ export default function Contact() {
   };
 
   return (
-    <div className={`flex flex-col py-20 justify-center align-center min-w-full container ${isHamOpen ? "open" : "close"}`}>
+    <div
+      className={`flex flex-col py-20 justify-center align-center min-w-full container ${
+        isHamOpen ? "open" : "close"
+      }`}
+    >
       <Head>
-        <title>RY | Contact</title>
+        <title>Contact</title>
       </Head>
-      {!isSubmitted ? (
-        <div >
-          <p className="html">&lt;html&gt;</p>
-          <p className="body">&lt;body&gt;</p>
 
-          {/* <p className="h1 mt-5">&lt;h1&gt;</p>
-          <h1 className="mb-5 text-center">
-            If you want to get in touch, please fill out the form
-          </h1>
-          <p className="h1">&lt;h1 /&gt;</p> */}
-          <p className="form mb-5">&lt;form&gt;</p>
-          <main class="flexbox-col">
-            <div class="form-wrapper">
-              <form
-                id="form"
-                name="emailform"
-                onSubmit={handleSubmit((data) => submitForm(data))}
-              >
-                <div class="form-input-grid">
-                  <div controlId="nameField">
-                    <p class="form-text">Username*</p>
-                    <div class="form-input-wrapper flexbox-left">
-                      {/* <i class="uil uil-user"></i> */}
-                      {/* <Icon
-                        icon="fluent-mdl2:profile-search"
-                        color="#a1a6fc"
-                        className="uil uil-user"
-                      /> */}
-                      <Icon icon="uil:user" className="icon"/>
-                      <input
-                        class="form-input"
-                        id="uname"
-                        name="uname"
-                        type="text"
-                        placeholder="Username"
-                        aria-label=""
-                        required
-                        isInvalid={errors.name}
-                        {...register("name")}
-                      />
-                    </div>
-                  </div>
-
-                  <div class="form-input-max" controlId="emailField">
-                    <p class="form-text">Email*</p>
-                    <div class="form-input-wrapper flexbox-left">
-                    <Icon icon="uil:at" className="icon" />
-                      <input
-                        class="form-input"
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Email"
-                        aria-label=""
-                        required
-                        isInvalid={errors.email}
-                        {...register("email")}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-input-max" controlId="messageField">
-                  <div class="form-text">Message* </div>
-                  <div
-                    id="textarea"
-                    class="form-input-wrapper flexbox-left-start"
-                  >
-                   <Icon icon="uil:comment-alt-heart" className="icon mt-5" />
-                    <textarea
-                      class="form-input"
-                      id="message"
-                      name="message"
-                      placeholder="Please type your message..."
-                      maxlength="500"
+      <div>
+        <p className="html">&lt;html&gt;</p>
+        <p className="body">&lt;body&gt;</p>
+        <p className="form mb-5">&lt;form&gt;</p>
+        <main className="flexbox-col">
+          <div className="form-wrapper">
+            <form
+              id="form"
+              name="emailform"
+              onSubmit={handleSubmit((data) => submitForm(data))}
+            >
+              <div className="form-input-grid">
+                <div>
+                  <p className="form-text">Username*</p>
+                  <div className="form-input-wrapper flexbox-left">
+                    <Icon icon="uil:user" className="icon1" />
+                    <input
+                      className="form-input1"
+                      id="uname"
+                      name="uname"
+                      type="text"
+                      // placeholder="Username"
                       aria-label=""
                       required
-                      isInvalid={errors.message}
-                      {...register("message")}
-                    ></textarea>
+                      {...register("name")}
+                      value={inputName}
+                      onChange={handleInputName}
+                    />
                   </div>
                 </div>
-                <div class="form-input-max flexbox-left ml-10">
-                  <div class="button-wrapper ">
-                    <button
-                      id="form-button"
-                      type="submit"
-                      class="button btn-primary flex flex-row justify-center items-center text-xl font-medium"
-                      // disabled={isSubmitting}
-                    >
-                      <Icon icon="uil:envelope-heart" className="text-4xl mr-3"/>
-                      {isSubmitting ? "Sending..." : "Submit"}
-                      <div class="btn-secondary"></div>
-                    </button>
+
+                <div className="form-input-max">
+                  <p className="form-text">Email*</p>
+                  <div className="form-input-wrapper flexbox-left">
+                    <Icon icon="uil:at" className="icon1" />
+                    <input
+                      className="form-input1"
+                      id="email"
+                      name="email"
+                      type="email"
+                      // placeholder="Email"
+                      aria-label=""
+                      required
+                      {...register("email")}
+                      value={inputMail}
+                      onChange={handleInputMail}
+                    />
                   </div>
                 </div>
-              </form>
-            </div>
-          </main>
+              </div>
 
-          <p className="form mt-5" >&lt;form /&gt;</p>
-          <p className="body">&lt;body /&gt;</p>
-          <p className="html">&lt;html/&gt;</p>
-        </div>
-      ) : (
-        <div className="flex flex-col items-center justify-center">
-          <p className="html">&lt;html&gt;</p>
-          <p className="body">&lt;body&gt;</p>
+              <div className="form-input-max">
+                <div className="form-text">Message* </div>
+                <div
+                  id="textarea"
+                  className="form-input-wrapper flexbox-left-start"
+                >
+                  <Icon icon="uil:comment-alt-heart" className="icon mt-5" />
+                  <textarea
+                    className="form-input"
+                    id="message"
+                    name="message"
+                    placeholder="Please type your message..."
+                    maxLength="500"
+                    aria-label=""
+                    required
+                    {...register("message")}
+                    value={inputMessage}
+                    onChange={handleInputMessage}
+                  ></textarea>
+                </div>
+              </div>
+              <div className="form-input-max flexbox-left ml-10">
+                <div className="button-wrapper ">
+                  <button
+                    id="form-button"
+                    type="submit"
+                    className="button btn-primary flex flex-row justify-center items-center text-xl font-medium"
+                  >
+                    <Icon icon="uil:envelope-heart" className="text-4xl mr-3" />
+                    {isSubmitting ? "Sending..." : "Submit"}
+                    <div className="btn-secondary"></div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </main>
 
-          <p className="h1">&lt;h1&gt;</p>
-          <h1>Thank you!</h1>
-          <p className="h1">&lt;h1 /&gt;</p>
-          <p className="p">&lt;p&gt;</p>
-          <main class="flexbox-col">
-            <div class="form-wrapper">
-              <form id="form">
-                <p>
-                  Your message has been received. Please check your email for
-                  confirmation.
-                </p>
-              </form>
-            </div>
-          </main>
-          <p className="p">&lt;p /&gt;</p>
-          <p className="body">&lt;body /&gt;</p>
-          <p className="html">&lt;html/&gt;</p>
-        </div>
-      )}
+        <Modal
+          onClose={handleClose}
+          isOpen={isSubmitted}
+          isCentered
+          motionPreset="scale"
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Thank You!</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              Your message has been received. Please check your email for
+              confirmation.
+            </ModalBody>
+            <ModalFooter>
+              <Button onClick={handleClose}>Close</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </div>
     </div>
   );
 }

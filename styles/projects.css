@@ -24,12 +24,6 @@
     }
   }
 
-
-  #title {
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
-
   .website{
     color: #039be5;
   }
@@ -71,6 +65,7 @@
   .JavaScript {
     background: #EADD86;
   }
+  
   .JavaScript span::after {
     content: "JavaScript";
   }
@@ -78,6 +73,7 @@
   .typescript {
     background: #AFEAE5;
   }
+
   .typescript span::after {
     content: "TypeScript";
   }
@@ -88,8 +84,4 @@
   
   .github {
     color: #739150;
-  }
-  
-  .status {
-    color: #7699C2;
   }

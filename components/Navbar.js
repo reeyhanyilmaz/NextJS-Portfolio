@@ -30,35 +30,30 @@ function Navbar() {
         className={`fa-solid fa-xmark cross ${isHamOpen ? "open" : "close"}`}
         onClick={handleClick}
       ></i>
-
       <div className="circle"></div>
 
       <ul>
-        <li>
+        <li onClick={handleClick}>
           <i className="fa-solid fa-house"></i>
           <Link href="/">
-            {" "}
-            <p> .about() </p>{" "}
+            <p> .about() </p>
           </Link>
         </li>
-        <li>
+        <li onClick={handleClick}>
           <i className="fa-solid fa-user"></i>
           <Link href="/projects">
-            {" "}
-            <p> .projects() </p>{" "}
+            <p> .projects() </p>
           </Link>
         </li>
-        <li>
+        <li onClick={handleClick}>
           <i className="fa-solid fa-envelope"></i>
           <Link href="/contact">
-            {" "}
             <p> .contact() </p>
           </Link>
         </li>
-        <li>
+        <li onClick={handleClick}>
           <i className="fa-duotone fa-feather"></i>
           <Link href="/blog">
-            {" "}
             <p> .blog() </p>
           </Link>
         </li>

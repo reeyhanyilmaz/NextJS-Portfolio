@@ -18,7 +18,6 @@ import {
   ModalBody,
   ModalCloseButton,
   Button,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
@@ -27,10 +26,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
-  const { onClose } = useDisclosure();
-  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-
 
   //bu kısmı modal kapanınca inputlar boş olsun diye yazdım
   const [inputName, setInputName] = useState("");
@@ -126,90 +122,87 @@ export default function Contact() {
         <p className="html">&lt;html&gt;</p>
         <p className="body">&lt;body&gt;</p>
         <p className="form mb-5">&lt;form&gt;</p>
-        <main className="flexbox-col">
-          <div className="form-wrapper">
+        <main className="flexbox-col ">
+          <div className="form-wrapper flex flex-col">
             <form
               id="form"
               name="emailform"
               onSubmit={handleSubmit((data) => submitForm(data))}
             >
+              <p className="flex flex-row justify-content items-center mb-5 text-xl text-center ml-10">
+                If you want to contact me, please send an e-mail{" "}
+                <Icon icon="noto:purple-heart" className="ml-2" />
+              </p>
               <div className="form-input-grid">
-                <div>
-                  <p className="form-text">Username*</p>
-                  <div className="form-input-wrapper flexbox-left">
-                    <Icon icon="uil:user" className="icon1" />
-                    <input
-                      className="form-input1"
-                      id="uname"
-                      name="uname"
-                      type="text"
-                      // placeholder="Username"
-                      aria-label=""
-                      required
-                      {...register("name")}
-                      value={inputName}
-                      onChange={handleInputName}
-                    />
-                  </div>
-                </div>
-
-                <div className="form-input-max">
-                  <p className="form-text">Email*</p>
-                  <div className="form-input-wrapper flexbox-left">
-                    <Icon icon="uil:at" className="icon1" />
-                    <input
-                      className="form-input1"
-                      id="email"
-                      name="email"
-                      type="email"
-                      // placeholder="Email"
-                      aria-label=""
-                      required
-                      {...register("email")}
-                      value={inputMail}
-                      onChange={handleInputMail}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="form-input-max">
-                <div className="form-text">Message* </div>
-                <div
-                  id="textarea"
-                  className="form-input-wrapper flexbox-left-start"
-                >
-                  <Icon icon="uil:comment-alt-heart" className="icon mt-5" />
-                  <textarea
-                    className="form-input"
-                    id="message"
-                    name="message"
-                    placeholder="Please type your message..."
-                    maxLength="500"
+                <div className="form-input-wrapper flexbox-left">
+                  <Icon icon="uil:user" className="icon1" />
+                  <input
+                    className="form-input1"
+                    id="uname"
+                    name="uname"
+                    type="text"
+                    placeholder="Username"
                     aria-label=""
                     required
-                    {...register("message")}
-                    value={inputMessage}
-                    onChange={handleInputMessage}
-                  ></textarea>
+                    {...register("name")}
+                    value={inputName}
+                    onChange={handleInputName}
+                  />
+                </div>
+
+                <div className="form-input-wrapper flexbox-left">
+                  <Icon icon="uil:at" className="icon1" />
+                  <input
+                    className="form-input1"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    aria-label=""
+                    required
+                    {...register("email")}
+                    value={inputMail}
+                    onChange={handleInputMail}
+                  />
                 </div>
               </div>
-              <div className="form-input-max flexbox-left ml-10">
-                <div className="button-wrapper ">
-                  <button
-                    id="form-button"
-                    type="submit"
-                    className="button btn-primary flex flex-row justify-center items-center text-xl font-medium"
-                  >
-                    <Icon icon="uil:envelope-heart" className="text-4xl mr-3" />
-                    {isSubmitting ? "Sending..." : "Submit"}
-                    <div className="btn-secondary"></div>
-                  </button>
-                </div>
+
+              <div
+                id="textarea"
+                className="form-input-wrapper flexbox-left-start"
+              >
+                <Icon icon="uil:comment-alt-heart" className="icon mt-5" />
+                <textarea
+                  className="form-input"
+                  id="message"
+                  name="message"
+                  placeholder="Please type your message..."
+                  maxLength="500"
+                  aria-label=""
+                  required
+                  {...register("message")}
+                  value={inputMessage}
+                  onChange={handleInputMessage}
+                ></textarea>
+              </div>
+
+              <div className="button-wrapper ">
+                <button
+                  id="form-button"
+                  type="submit"
+                  className="button btn-primary flex flex-row justify-center items-center text-xl font-bold"
+                >
+                  <Icon icon="uil:envelope-heart" className="text-4xl mr-3" />
+                  {isSubmitting ? "Sending..." : "Submit"}
+                  <div className="btn-secondary"></div>
+                </button>
               </div>
             </form>
           </div>
         </main>
+        <p className="form">&lt;form /&gt;</p>
+        <p className="body">&lt;body /&gt;</p>
+        <p className="html">&lt;html/&gt;</p>
 
         <Modal
           onClose={handleClose}

@@ -3,11 +3,10 @@ import Head from "next/head";
 import { useSelector } from "react-redux";
 import { Icon } from "@iconify/react";
 import "../styles/projects.css";
-import { useState } from 'react';
-import { data } from "../data.json"
+import { useState } from "react";
+import { data } from "../data.json";
 
 export default function Projects() {
- 
   const [activeCard, setActiveCard] = useState(null);
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
 
@@ -18,13 +17,17 @@ export default function Projects() {
   return (
     <div
       id="portfolio"
-      className={`flex flex-col p-20 justify-center align-center container ${
+      className={`flex flex-col justify-center align-center container ${
         isHamOpen ? "open" : "close"
       }`}
     >
       <Head>
         {/* sunucu tarafında çalıştırılan JavaScript kodunun, bir tarayıcı ortamı gerektiren Materialize kütüphanesi gibi istemci tarafı bir kütüphane ile uyumsuz olduğundan bu şekilde kullandım. */}
-        <script type="text/javascript" src="/js/materialize.min.js" defer></script>
+        <script
+          type="text/javascript"
+          src="/js/materialize.min.js"
+          defer
+        ></script>
         <title>Projects</title>
       </Head>
       <p className="html">&lt;html&gt;</p>
@@ -34,7 +37,7 @@ export default function Projects() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="col m4 hover:transform hover:scale-105 hover:bg-gray-100 hover:shadow-xl"
+            className="col m4 hover:transform hover:scale-105"
           >
             <div
               className="card hoverable"
@@ -42,7 +45,7 @@ export default function Projects() {
             >
               <div className="card-image waves-effect waves-block waves-light">
                 <img
-                  style={{ width: "410px" , height: "220px"}}
+                  style={{ width: "410px", height: "220px" }}
                   className="activator"
                   src={item.image}
                 />
@@ -51,19 +54,21 @@ export default function Projects() {
                 <StackIcons data={item.stack} />
                 <span className="card-title activator grey-text text-darken-4">
                   {item.project}
-                  <Icon
+                  {/* <Icon
                     icon="gg:more-vertical-o"
                     width="25"
                     className="right"
-                  />
+                  /> */}
                 </span>
                 <div>
                   <span>
-                    <a href={item.website} className="website" target="_blank">Website</a>
+                    <a href={item.website} className="website" target="_blank">
+                      Website
+                    </a>
                   </span>
                   <span>
                     <a className="github" href={item.github} target="_blank">
-                      Github
+                      GitHub
                     </a>
                   </span>
                 </div>

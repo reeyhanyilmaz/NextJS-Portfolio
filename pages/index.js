@@ -1,14 +1,10 @@
 import Image from "next/image";
 import Head from "next/head";
 import "../styles/index.css";
-import { Grid, Box, Text } from "@chakra-ui/react";
-import { LinkIcon, InfoOutlineIcon, Button } from "@chakra-ui/icons";
-import Layout from "../components/Layout";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function Home() {
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
-  const activePage = useSelector((state) => state.portfolio.activePage);
 
   return (
     <div
@@ -29,7 +25,7 @@ export default function Home() {
             <div className="about slideLeft">Frontend Developer</div>
             <p className="h1">&lt;h1 /&gt;</p>
             <p className="p mt-5">&lt;p&gt;</p>
-            <div className="moreAbout slideLeft md:w-96">
+            <div className="moreAbout slideLeft md:w-[600px]">
               <p>
                 I finished my undergraduate education as a chemist. I became a
                 frontend developer by making a career change. I am currently
@@ -43,13 +39,27 @@ export default function Home() {
                 many libraries. I started learning in React Native and am
                 developing it.
               </p>
+              <div className="mt-5">
+                <i class="float_html duration-500 fab fa-html5 fa-2x text-orange-400"></i>
+                <i class="float_html duration-500 fa-2x fa-brands fa-bootstrap text-[#894ba0]"></i>
+                <i class="float_html duration-500 fab fa-css3 fa-2x text-red-400"></i>
+                <i class="float_html duration-500 fab fa-js-square fa-2x text-yellow-400"></i>
+                <i class="float_html duration-500 fa-2x fa-brands fa-react text-[#234d95]"></i>
+              </div>
             </div>
             <p className="p mt-5">&lt;p /&gt;</p>
           </div>
 
+          {/* skils */}
+          {/* <div>
+          <p>Skils</p>
+         
+          
+        </div> */}
+
           <div className="devPic slideLeft mt-5 flex justify-content ">
             <Image
-              src="/assets/my_photo.jpeg"
+              src="/assets/picture.jpeg"
               alt="my_photo"
               width="500"
               height="200"

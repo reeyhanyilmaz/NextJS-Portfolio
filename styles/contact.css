@@ -22,10 +22,6 @@
     --font-main: font-family: 'Comic Neue', cursive;
 }
 
-/* main {
-    min-height: 100vh;
-} */
-
 /* icons */
 .icon,
 .icon1 {
@@ -42,6 +38,7 @@
 
 .icon1 {
     right: -60px;
+    margin-top: -10px;
 }
 
 textarea {
@@ -128,7 +125,6 @@ textarea::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     font-family: 'Comic Neue', cursive;
-    ;
 }
 
 #form {
@@ -181,7 +177,7 @@ textarea::-webkit-scrollbar-thumb {
 
 .form-input,
 .form-input1 {
-    width: 100% !important;
+    width: 100%;
     padding: 1.2em 1.2em 1.2em 3.6em !important;
     font-size: 1.22rem !important;
     border-radius: 5em !important;

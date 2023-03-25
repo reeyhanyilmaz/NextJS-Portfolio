@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useSelector } from "react-redux";
 import "../styles/blog.css";
 
-function blog() {
+function Blog() {
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
 
   return (
@@ -21,7 +21,7 @@ function blog() {
         {/* postcss */}
         <div class="content-wrapper">
           <div class="news-card">
-            <a href="#" class="news-card__card-link"></a>
+            <a href="/ab-test" class="news-card__card-link"></a>
             <img
               src="https://images.unsplash.com/photo-1555066931-bf19f8fd1085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80"
               alt="ab-test"
@@ -45,7 +45,7 @@ function blog() {
           </div>
 
           <div class="news-card">
-            <a href="#" class="news-card__card-link"></a>
+            <a href="https://medium.com/@hakanolgun/universal-links-for-react-native-cli-f0a1c87360f1" class="news-card__card-link"></a>
             <img
               src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
               alt="reac-native"
@@ -81,4 +81,4 @@ function blog() {
   );
 }
 
-export default blog;
+export default Blog;

@@ -2,20 +2,31 @@
     "data": [
         {
             "project": "Captain Marine",
+
             "stack": [
                 "nextjs"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Captain Marine is a company website. Yacht and marine equipment is sold",
             "website": "https://captainmarin.com/",
             "github": "https://github.com/reeyhanyilmaz/CaptainMarineCompanyWebSite",
             "image": "https://images.unsplash.com/photo-1601919972568-768b9bbcf548?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
+        },
+        {
+            "project": "Meditation App",
+            "stack": [
+                "JavaScript"
+            ],
+            "description": "Meditation app where you can choose duration and category",
+            "website": "https://reeyhanyilmaz.github.io/JavaScript-MeditationApp",
+            "github": "https://github.com/reeyhanyilmaz/JavaScript-MeditationApp",
+            "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=998&q=80"
         },
         {
             "project": "E-Commerce App",
             "stack": [
                 "react"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "A website that sells chemical materials",
             "website": "https://reyhanyilmaz-chemdev-ecommerce.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/React-eCommerceApp",
             "image": "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -25,20 +36,10 @@
             "stack": [
                 "JavaScript"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Timed memory card game",
             "website": "https://reeyhanyilmaz.github.io/JavaScript-MemoryCardGame/",
             "github": "https://github.com/reeyhanyilmaz/JavaScript-MemoryCardGame",
             "image": "https://images.unsplash.com/photo-1588591795084-1770cb3be374?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        },
-        {
-            "project": "Meditation App",
-            "stack": [
-                "JavaScript"
-            ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
-            "website": "https://reeyhanyilmaz.github.io/JavaScript-MeditationApp",
-            "github": "https://github.com/reeyhanyilmaz/JavaScript-MeditationApp",
-            "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=998&q=80"
         },
         {
             "project": "Typing Speed App",
@@ -46,7 +47,7 @@
                 "react",
                 "redux"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Application where we can measure our writing speed by typing random numbers on the screen. Turkish and English word options are available.",
             "website": "https://typing-speed-project.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/Redux-TypingSpeedApp",
             "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
@@ -57,7 +58,7 @@
                 "react",
                 "typescript"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine.",
+            "description": "An application where we will get information about body mass index calculation vew",
             "website": "https://reyhan-bmi-calculator.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/ReactTypeScript-BMICalculate",
             "image": "https://images.unsplash.com/photo-1618939291225-8d558ea4369f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -67,7 +68,7 @@
             "stack": [
                 "react"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Weekly weather application that can be selected according to the provinces",
             "website": "https://reyhanyilmaz-react-weatherapp.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/React-WeatherApp",
             "image": "https://images.unsplash.com/photo-1465577512280-1c2d41a79862?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1447&q=80"
@@ -77,7 +78,7 @@
             "stack": [
                 "JavaScript"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Application where we can calculate tip",
             "website": "https://reeyhanyilmaz.github.io/JavaScript-TipCalculator/",
             "github": "https://github.com/reeyhanyilmaz/JavaScript-TipCalculator",
            "image" : "https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -88,7 +89,7 @@
                 "react",
                 "redux"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "An application based on the reduction of money by buying various things by spending 1 million TL",
             "website": "https://reyhan-redux-spend-money.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/Redux-SpendMoney",
             "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -99,7 +100,7 @@
                 "react",
                 "redux"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "An application where we can keep our notes and choose colors while writing notes",
             "website": "https://reyhanyilmaz-redux-notes-app.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/Redux-NotesApp",
             "image": "https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -109,7 +110,7 @@
             "stack": [
                 "JavaScript"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Object catching game, the object volume increases as the mouse hovers over it.",
             "website": "https://reeyhanyilmaz.github.io/JavaScript-NesneYakalamaOyunu/",
             "github": "https://github.com/reeyhanyilmaz/JavaScript-NesneYakalamaOyunu",
             "image": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -120,7 +121,7 @@
                 "react",
                 "typescript"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "Rick and Morty is an application where we can see character, episode and character details.",
             "website": "https://nextjs-typescript-rickandmorty.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/NextJSwithTypeScript-RickandMortyApp",
             "image": "https://images.unsplash.com/photo-1533518463841-d62e1fc91373?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -130,7 +131,7 @@
             "stack": [
                 "react"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "An application where we note down what to do and can delete",
             "website": "https://reyhanyilmaz-todos.netlify.app/",
             "github": "https://github.com/reeyhanyilmaz/React-todos",
             "image": "https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -140,7 +141,7 @@
             "stack": [
                 "JavaScript"
             ],
-            "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+            "description": "An application where we can change color with random hex code",
             "website": "https://reeyhanyilmaz.github.io/JavaScript-ColorFlipper//",
             "github": "https://github.com/reeyhanyilmaz/JavaScript-ColorFlipper",
             "image": "https://images.unsplash.com/photo-1541723011216-c57eaed19919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"

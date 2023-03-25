@@ -192,6 +192,10 @@ textarea::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+.button_icon{
+    font-size: 30px;
+}
+
 .button,
 .btn-secondary {
     margin: 0;
@@ -218,7 +222,7 @@ textarea::-webkit-scrollbar-thumb {
 .button .btn-secondary {
     background-position: 0 50%;
     bottom: 0;
-    width: 150px;
+    width: 160px;
     font-weight: 600;
 }
 
@@ -291,7 +295,7 @@ background-color: white;
     }
 
     .heart{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .form-input{

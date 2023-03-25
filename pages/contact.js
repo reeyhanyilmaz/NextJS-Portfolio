@@ -201,7 +201,7 @@ export default function Contact() {
                   type="submit"
                   className="button btn-primary flex flex-row justify-center items-center text-xl font-bold"
                 >
-                  <Icon icon="uil:envelope-heart" className="text-4xl mr-3" />
+                  <Icon icon="uil:envelope-heart" className="text-4xl mr-3 button_icon" />
                   {isSubmitting ? "Sending..." : "Submit"}
                   <div className="btn-secondary"></div>
                 </button>

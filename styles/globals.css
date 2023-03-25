@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
 
 /*scroll button*/
 .back-to-top {
@@ -23,9 +24,10 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   }
 
-  body{
+  body, html {
     background-color: black !important;
-    font-family: 'Source Code Pro', monospace !important;
+    /* font-family: 'Source Code Pro', monospace !important; */
+    font-family: 'Comic Neue', cursive;
     color:#242120;
   }
 
@@ -34,6 +36,7 @@
     transform-origin: 0% 0%;
     transition: transform 250ms ease-in-out;
     width: 100vw;
+    padding: 100px 0;
   }
 
   /* hamburger acık */
@@ -66,8 +69,7 @@
   /* tag styles */
   .h1, .html, .body, .form , .p, .section{
     font-family: 'Source Code Pro', monospace;
-    color:#242120;
-    font-weight: 600;
+    color:#000000;
   }
 
   .html{
@@ -79,7 +81,7 @@
   }
 
   .h1 , .p{
-    margin-left: 5rem;
+    margin-left: 3rem;
   }
 
   .form, .section{

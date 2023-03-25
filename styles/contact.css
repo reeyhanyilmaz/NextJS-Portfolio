@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
 :root {
     --bc: #f9f3ee;
     --bc-dark: #141412;
@@ -17,7 +19,7 @@
     --paragraph: 1.1rem;
     --button-small: 1rem;
     /* Fonts */
-    --font-main: "Poppins";
+    --font-main: font-family: 'Comic Neue', cursive;
 }
 
 /* main {
@@ -25,19 +27,20 @@
 } */
 
 /* icons */
-.icon , .icon1{
+.icon,
+.icon1 {
     position: relative;
     color: #a1a6fc;
     font-weight: 400;
     font-size: 40px;
 }
 
-.icon{
+.icon {
     right: -70px;
     margin-right: 5px;
 }
 
-.icon1{
+.icon1 {
     right: -60px;
 }
 
@@ -124,6 +127,8 @@ textarea::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Comic Neue', cursive;
+    ;
 }
 
 #form {
@@ -174,7 +179,8 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 2.25em;
 }
 
-.form-input , .form-input1 {
+.form-input,
+.form-input1 {
     width: 100% !important;
     padding: 1.2em 1.2em 1.2em 3.6em !important;
     font-size: 1.22rem !important;
@@ -185,11 +191,13 @@ textarea::-webkit-scrollbar-thumb {
     transition: border .15s ease-in-out !important;
 }
 
-.form-input:hover , .form-input1:hover{
+.form-input:hover,
+.form-input1:hover {
     border: 2px solid var(--primary) !important;
 }
 
-.form-input:focus , .form-input1:focus {
+.form-input:focus,
+.form-input1:focus {
     outline: none !important;
     border: 2px solid var(--primary) !important;
 }
@@ -198,7 +206,7 @@ textarea::-webkit-scrollbar-thumb {
 .button-wrapper {
     margin: 2em 0 1em 0;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 .button,

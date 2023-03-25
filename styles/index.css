@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Code+Pro:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Code+Pro:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
 .infoContainer {
     display: flex;
     justify-content: space-around;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Comic Neue', cursive;
 }
 
 .devInfo {
@@ -14,20 +15,20 @@
 
 .hello {
     font-size: 65px;
-    margin-left: 10rem;
+    margin-left: 8rem;
 }
 
 .name {
     font-size: 60px;
     font-weight: bold;
     opacity: 0;
-    margin-left: 10rem;
+    margin-left: 8rem;
 }
 
 .about {
     font-size: 35px;
     opacity: 0;
-    margin-left: 10rem;
+    margin-left: 8rem;
 }
 
 .moreAbout {
@@ -39,7 +40,7 @@
 
 @media only screen and (width > 1200px) {
     .moreAbout {
-        margin-left: 10rem;
+        margin-left: 8rem;
     }
 
     .infoContainer{

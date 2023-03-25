@@ -10,11 +10,10 @@ import { Provider } from "react-redux";
 import { store } from "../redux/store";
 
 //materilize css
-import 'materialize-css/dist/css/materialize.min.css';
+import "materialize-css/dist/css/materialize.min.css";
 
 function MyApp({ Component, pageProps }) {
-  // The back-to-top button is hidden at the beginning
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false); // The back-to-top button is hidden at the beginning
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -44,7 +43,9 @@ function MyApp({ Component, pageProps }) {
           <>
             {showButton && (
               <button onClick={scrollToTop} className="back-to-top">
-                <ArrowUpIcon mb="0.5" mr="0.5" />
+                <div class="animate-bounce bg-[#a1a6fc] dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+                  <ArrowUpIcon mb="0.5" mr="0.5" />
+                </div>
               </button>
             )}
           </>

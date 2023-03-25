@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useSelector } from "react-redux";
 import "../styles/ab-test.css";
 
-function abTest() {
+function AbTest() {
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
 
   return (
@@ -169,4 +169,4 @@ function abTest() {
   );
 }
 
-export default abTest;
+export default AbTest;

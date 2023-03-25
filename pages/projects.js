@@ -33,62 +33,60 @@ export default function Projects() {
       <p className="html">&lt;html&gt;</p>
       <p className="body">&lt;body&gt;</p>
       <p className="section">&lt;section&gt;</p>
-      <div className="row">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="col m4 hover:transform hover:scale-105"
-          >
-            <div
-              className="card hoverable"
-              onClick={() => handleCardClick(index)}
-            >
-              <div className="card-image waves-effect waves-block waves-light">
-                <img
-                  style={{ width: "410px", height: "220px" }}
-                  className="activator"
-                  src={item.image}
-                />
-              </div>
-              <div className="card-content">
-                <StackIcons data={item.stack} />
-                <span className="card-title activator grey-text text-darken-4">
-                  {item.project}
-                  {/* <Icon
-                    icon="gg:more-vertical-o"
-                    width="25"
-                    className="right"
-                  /> */}
-                </span>
-                <div>
-                  <span>
-                    <a href={item.website} className="website" target="_blank">
-                      Website
-                    </a>
-                  </span>
-                  <span>
-                    <a className="github" href={item.github} target="_blank">
-                      GitHub
-                    </a>
-                  </span>
+      <div className="content">
+        <div className="row">
+          {data.map((item, index) => (
+            <div key={index} className="col m4 hover:transform hover:scale-105">
+              <div
+                className="card hoverable"
+                onClick={() => handleCardClick(index)}
+              >
+                <div className="card-image waves-effect waves-block waves-light">
+                  <img
+                    style={{ width: "410px", height: "220px" }}
+                    className="activator"
+                    src={item.image}
+                  />
                 </div>
-              </div>
-              {activeCard === index && (
-                <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4 mb-5">
+                <div className="card-content">
+                  <StackIcons data={item.stack} />
+                  <span className="card-title activator grey-text text-darken-4">
                     {item.project}
-                    <Icon
-                      icon="line-md:close-circle"
-                      className="right"
-                      width="25"
-                    />
                   </span>
-                  <p>{item.description}</p>
+                  <div>
+                    <span>
+                      <a
+                        href={item.website}
+                        className="website"
+                        target="_blank"
+                      >
+                        Website
+                      </a>
+                    </span>
+                    <span>
+                      <a className="github" href={item.github} target="_blank">
+                        GitHub
+                      </a>
+                    </span>
+                  </div>
                 </div>
-              )}
+                {activeCard === index && (
+                  <div className="card-reveal">
+                    <span className="card-title grey-text text-darken-4 mb-5">
+                      {item.project}
+                      <Icon
+                        icon="line-md:close-circle"
+                        className="right"
+                        width="25"
+                      />
+                    </span>
+                    <p>{item.description}</p>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <p className="section">&lt;section/&gt;</p>
       <p className="body">&lt;body /&gt;</p>

@@ -34,25 +34,25 @@ function Navbar() {
 
       <ul>
         <li onClick={handleClick}>
-          <i className="fa-solid fa-house"></i>
+          <i className="fa-solid fa-house mr-3"></i>
           <Link href="/">
             <p> .about() </p>
           </Link>
         </li>
         <li onClick={handleClick}>
-          <i className="fa-solid fa-user"></i>
+          <i className="fa-solid fa-user mr-3"></i>
           <Link href="/projects">
             <p> .projects() </p>
           </Link>
         </li>
         <li onClick={handleClick}>
-          <i className="fa-solid fa-envelope"></i>
+          <i className="fa-solid fa-envelope mr-3"></i>
           <Link href="/contact">
             <p> .contact() </p>
           </Link>
         </li>
         <li onClick={handleClick}>
-          <i className="fa-duotone fa-feather"></i>
+          <i className="fa-duotone fa-feather mr-3"></i>
           <Link href="/blog">
             <p> .blog() </p>
           </Link>

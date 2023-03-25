@@ -23,22 +23,12 @@
 }
 
 /* icons */
-.icon,
-.icon1 {
+.icon {
     position: relative;
     color: #a1a6fc;
     font-weight: 400;
-    font-size: 40px;
-}
-
-.icon {
-    right: -70px;
+    font-size: 30px;
     margin-right: 5px;
-}
-
-.icon1 {
-    right: -60px;
-    margin-top: -10px;
 }
 
 textarea {
@@ -129,6 +119,7 @@ textarea::-webkit-scrollbar-thumb {
 
 #form {
     width: 75%;
+   
 }
 
 .form-title {
@@ -175,10 +166,8 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 2.25em;
 }
 
-.form-input,
-.form-input1 {
-    width: 100%;
-    padding: 1.2em 1.2em 1.2em 3.6em !important;
+.form-input{
+    padding: 1.2em 1.2em 1.2em 2em !important;
     font-size: 1.22rem !important;
     border-radius: 5em !important;
     box-shadow: 0 5px 20px 0 rgba(237, 232, 228, .8) !important;
@@ -187,13 +176,11 @@ textarea::-webkit-scrollbar-thumb {
     transition: border .15s ease-in-out !important;
 }
 
-.form-input:hover,
-.form-input1:hover {
+.form-input:hover {
     border: 2px solid var(--primary) !important;
 }
 
-.form-input:focus,
-.form-input1:focus {
+.form-input:focus {
     outline: none !important;
     border: 2px solid var(--primary) !important;
 }
@@ -261,6 +248,10 @@ textarea::-webkit-scrollbar-thumb {
     bottom: -5px;
 }
 
+.modeCloseBtn:focus{
+background-color: white;
+}
+
 /* Media Rules */
 @media only screen and (max-width: 1660px) {
     :root {
@@ -297,6 +288,17 @@ textarea::-webkit-scrollbar-thumb {
     /* Form */
     #form {
         width: 90%;
+    }
+
+    .heart{
+        font-size: 50px;
+    }
+
+    .form-input{
+        height: 1rem;
+    }
+    textarea.form-input{
+        height: 1rem!important;
     }
 }
 
@@ -335,4 +337,13 @@ textarea::-webkit-scrollbar-thumb {
     padding: 1.5em;
     animation: 1s cubic-bezier(0.47, 0, 0.745, 0.715) .7s 1 glow-load;
     animation-fill-mode: forwards;
+    margin-bottom: 20px;
+}
+
+.form-text {
+    margin: 1em 0 .75em 2.2em;
+    color: var(--gray-dark);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
 }

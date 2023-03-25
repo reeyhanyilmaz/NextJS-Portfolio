@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Head from "next/head";
 import { useSelector } from "react-redux";
 import "../styles/ab-test.css";
 
@@ -11,8 +12,11 @@ function AbTest() {
       id="ab-test"
       className={`min-w-full container ${isHamOpen ? "open" : "close"}`}
     >
+      <Head>
+        <title>AB Test wit JavaScript</title>
+      </Head>
       <div className="blog-content">
-        <h1>How to Create an A/B Test Using JavaScript?</h1>
+        <h1>How to Create an A/B Test Using JavaScript</h1>
         <br />
 
         <h2>What is JavaScript?</h2>
@@ -53,6 +57,7 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />
@@ -66,6 +71,7 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />
@@ -77,6 +83,7 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />
@@ -88,6 +95,7 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />
@@ -103,6 +111,7 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
 
@@ -119,12 +128,14 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
           <Image
             src="/assets/abtest/7.png"
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />
@@ -136,6 +147,7 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />
@@ -148,18 +160,21 @@ function AbTest() {
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
           <Image
             src="/assets/abtest/10.png"
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
           <Image
             src="/assets/abtest/11.png"
             width="600"
             height="400"
             alt="abtest"
+            className="mt-5 shadow-2xl"
           />
         </p>
         <br />

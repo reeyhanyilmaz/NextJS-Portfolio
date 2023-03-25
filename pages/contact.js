@@ -130,60 +130,69 @@ export default function Contact() {
               onSubmit={handleSubmit((data) => submitForm(data))}
             >
               <p className="flex flex-row justify-content items-center mb-5 text-xl text-center ml-10">
-                If you want to contact me, please send an e-mail{" "}
-                <Icon icon="noto:purple-heart" className="ml-2" />
+                If you want to contact me, please send an e-mail.
+                <Icon icon="noto:purple-heart" className="heart ml-2" />
               </p>
               <div className="form-input-grid">
-                <div className="form-input-wrapper flexbox-left">
-                  <Icon icon="uil:user" className="icon1" />
-                  <input
-                    className="form-input1"
-                    id="uname"
-                    name="uname"
-                    type="text"
-                    placeholder="Username"
-                    aria-label=""
-                    required
-                    {...register("name")}
-                    value={inputName}
-                    onChange={handleInputName}
-                  />
+                <div>
+                 
+                  <p className="form-text">  <Icon icon="uil:user" className="icon" /> Username*</p>
+                  <div className="form-input-wrapper flexbox-left">
+                    <input
+                      className="form-input"
+                      id="uname"
+                      name="uname"
+                      type="text"
+                      placeholder="Username"
+                      aria-label=""
+                      required
+                      {...register("name")}
+                      value={inputName}
+                      onChange={handleInputName}
+                    />
+                  </div>
                 </div>
 
-                <div className="form-input-wrapper flexbox-left">
-                  <Icon icon="uil:at" className="icon1" />
-                  <input
-                    className="form-input1"
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    aria-label=""
-                    required
-                    {...register("email")}
-                    value={inputMail}
-                    onChange={handleInputMail}
-                  />
+                <div>
+                  <p className="form-text">
+                  <Icon icon="uil:at" className="icon" /> Email*</p>
+                  <div className="form-input-wrapper flexbox-left">
+                    <input
+                      className="form-input"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      aria-label=""
+                      required
+                      {...register("email")}
+                      value={inputMail}
+                      onChange={handleInputMail}
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div
-                id="textarea"
-                className="form-input-wrapper flexbox-left-start"
-              >
-                <Icon icon="uil:comment-alt-heart" className="icon mt-5" />
-                <textarea
-                  className="form-input"
-                  id="message"
-                  name="message"
-                  placeholder="Please type your message..."
-                  maxLength="500"
-                  aria-label=""
-                  required
-                  {...register("message")}
-                  value={inputMessage}
-                  onChange={handleInputMessage}
-                ></textarea>
+              <div>
+                
+                <p className="form-text"><Icon icon="uil:comment-alt-heart" className="icon" /> Message* (Min 10 characters)</p>
+                <div
+                  id="textarea"
+                  className="form-input-wrapper flexbox-left-start"
+                >
+                  <textarea
+                    className="form-input"
+                    id="message"
+                    name="message"
+                    placeholder=" Please type your message..."
+                    maxLength="500"
+                    aria-label=""
+                    required
+                    {...register("message")}
+                    value={inputMessage}
+                    onChange={handleInputMessage}
+                  ></textarea>
+                </div>
               </div>
 
               <div className="button-wrapper ">
@@ -213,7 +222,7 @@ export default function Contact() {
           <ModalOverlay />
           <ModalContent>
             <ModalHeader>Thank You!</ModalHeader>
-            <ModalCloseButton />
+            <ModalCloseButton className="modeCloseBtn" />
             <ModalBody>
               Your message has been received. Please check your email for
               confirmation.

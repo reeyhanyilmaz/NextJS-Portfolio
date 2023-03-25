@@ -21,7 +21,6 @@ export default function Home() {
           <div className="devInfo">
             <p className="h1">&lt;h1&gt;</p>
             <div className="hello slideLeft">Hi, I&#39;m Reyhan</div>
-            {/* <div className="name slideLeft">Reyhan</div> */}
             <div className="about slideLeft">Frontend Developer</div>
             <p className="h1">&lt;h1 /&gt;</p>
             <p className="p mt-5">&lt;p&gt;</p>
@@ -40,11 +39,11 @@ export default function Home() {
                 developing it.
               </p>
               <div className="mt-5">
-                <i class="float_html duration-500 fab fa-html5 fa-2x text-orange-400"></i>
-                <i class="float_html duration-500 fa-2x fa-brands fa-bootstrap text-[#894ba0]"></i>
-                <i class="float_html duration-500 fab fa-css3 fa-2x text-red-400"></i>
-                <i class="float_html duration-500 fab fa-js-square fa-2x text-yellow-400"></i>
-                <i class="float_html duration-500 fa-2x fa-brands fa-react text-[#234d95]"></i>
+                <i className="float_html duration-500 fab fa-html5 fa-2x text-orange-400"></i>
+                <i className="float_html duration-500 fa-2x fa-brands fa-bootstrap text-[#894ba0]"></i>
+                <i className="float_html duration-500 fab fa-css3 fa-2x text-red-400"></i>
+                <i className="float_html duration-500 fab fa-js-square fa-2x text-yellow-400"></i>
+                <i className="float_html duration-500 fa-2x fa-brands fa-react text-[#234d95]"></i>
               </div>
             </div>
             <p className="p mt-5">&lt;p /&gt;</p>

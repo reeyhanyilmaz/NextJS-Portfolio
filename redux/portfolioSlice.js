@@ -5,16 +5,12 @@ export const portfolioSlice = createSlice({
   //state
   initialState: {
     isHamOpen: false,
-    activePage: "home"
   },
   //fonksiyon
   reducers: {
     setIsHamOpen: (state) => {
       state.isHamOpen = !state.isHamOpen;
     },
-    setActivePage: (state , action) =>{
-      state.activePage = action.payload;
-    }
   },
 });
 

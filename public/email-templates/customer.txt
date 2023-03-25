@@ -2,8 +2,8 @@ Message Received!
 
 Dear %NAME%:
 
-Thank you for inquiring. We just wanted to let you know that we've received your message and will be responding soon.
+Thank you for the message. I would like to let you know that I have received your message and will reply soon.
 
 Have a great day!
 
-- The Webmaster
+Reyhan Yılmaz / Frontend Developer

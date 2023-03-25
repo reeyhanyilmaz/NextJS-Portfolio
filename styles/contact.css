@@ -231,6 +231,8 @@ textarea::-webkit-scrollbar-thumb {
 .button .btn-secondary {
     background-position: 0 50%;
     bottom: 0;
+    width: 150px;
+    font-weight: 600;
 }
 
 .button .btn-secondary {

@@ -16,7 +16,7 @@
   font-weight: 600;
 }
 
-@media only screen and (width < 768px) {
+@media only screen and (width < 768px) and (orientation: portrait) {
 
   .content {
     display: flex;
@@ -25,7 +25,7 @@
   }
 
   .row .col {
-    width: 350px;
+    width: 400px;
   }
 }
 

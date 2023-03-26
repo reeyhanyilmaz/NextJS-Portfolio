@@ -48,7 +48,7 @@
     }
 }
 
-@media only screen and (width < 768px) {
+@media only screen and (width < 768px) and (orientation: portrait) {
     .content{
         padding: 20px 10px 0 10px;
     }
@@ -73,7 +73,7 @@
     }
 
     .infoContainer {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .devPic.slideLeft {

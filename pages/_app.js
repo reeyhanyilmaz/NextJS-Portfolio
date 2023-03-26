@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           <>
             {showButton && (
               <button onClick={scrollToTop} className="back-to-top">
-                <div class="animate-bounce bg-[#a1a6fc] dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+                <div class="animate-bounce bg-[#a1a6fc] dark:bg-slate-800 p-2 w-12 h-12 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
                   <ArrowUpIcon mb="0.5" mr="0.5" />
                 </div>
               </button>

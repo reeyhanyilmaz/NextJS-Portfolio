@@ -8,6 +8,7 @@ export default function Home() {
 
   return (
     <div
+    id="about"
       className={`container py-20 min-w-full ${isHamOpen ? "open" : "close"}`}
     >
       <Head>

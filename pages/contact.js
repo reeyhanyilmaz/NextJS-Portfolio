@@ -110,7 +110,8 @@ export default function Contact() {
 
   return (
     <div
-      className={`flex flex-col py-20 justify-center align-center min-w-full container ${
+    id="contact_page"
+      className={` contect flex flex-col py-20 justify-center align-center min-w-full container ${
         isHamOpen ? "open" : "close"
       }`}
     >

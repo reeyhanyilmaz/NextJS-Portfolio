@@ -1,6 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Code+Pro:wght@300&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
+#about{
+    min-height: 100vh;
+
+}
 .infoContainer {
     display: flex;
     font-family: 'Comic Neue', cursive;
@@ -37,7 +41,7 @@
     opacity: 0;
 }
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 1920px) {
     .moreAbout {
         margin-left: 8rem;
     }

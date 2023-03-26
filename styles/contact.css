@@ -22,6 +22,10 @@
     --font-main: font-family: 'Comic Neue', cursive;
 }
 
+#contact_page{
+    min-height: 100vh;
+}
+
 /* icons */
 .icon {
     position: relative;

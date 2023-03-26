@@ -41,9 +41,8 @@ export default function Projects() {
                 className="card hoverable"
                 onClick={() => handleCardClick(index)}
               >
-                <div className="card-image waves-effect waves-block waves-light">
+                <div id="projects_card" className="card-image waves-effect waves-block waves-light">
                   <img
-                    style={{ width: "410px", height: "220px" }}
                     className="activator"
                     src={item.image}
                   />

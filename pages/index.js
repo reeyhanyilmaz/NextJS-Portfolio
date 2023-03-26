@@ -49,14 +49,7 @@ export default function Home() {
             </div>
             <p className="p mt-5">&lt;p /&gt;</p>
           </div>
-
-          {/* skils */}
-          {/* <div>
-          <p>Skils</p>
-         
           
-        </div> */}
-
           <div className="devPic slideLeft mt-5 flex justify-content ">
             <Image
               src="/assets/picture.jpeg"

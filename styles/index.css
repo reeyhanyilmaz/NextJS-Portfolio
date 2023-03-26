@@ -105,11 +105,7 @@
     }
 }
 
-/* home page delay */
-.name.slideLeft {
-    animation-delay: 0.5s;
-}
-
+/* delay */
 .about.slideLeft {
     animation-delay: 1s;
 }
@@ -117,37 +113,16 @@
 .moreAbout.slideLeft {
     animation-delay: 1.5s;
 }
-
-/* .devPic.slideLeft{
-    animation-delay: 2s;
-} */
+/* slide end */
 
 
-.icon:active {
-    transform: scale(1.2);
 
-}
-
+/* index page icons move  */
 .tailwind {
     animation-name: tailwind-text;
     animation-duration: 500ms;
     /*   animation-iteration-count:infinite; */
     display: inline-block;
-}
-
-
-@keyframes logos {
-    0% {
-        transform: translateY(0%);
-    }
-
-    50% {
-        transform: translateY(-20%);
-    }
-
-    100% {
-        transform: translateY(0%);
-    }
 }
 
 @keyframes tailwind-text {
@@ -166,35 +141,6 @@
     100% {
         transform: scale(1);
     }
-}
-
-.hide {
-    animation-name: hide_logo;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}
-
-@keyframes hide_logo {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-        border-radius: 0%;
-    }
-
-    50% {
-        transform: scale(0.5) ;
-        opacity:0.5;
-        border-radius: 40%;
-
-    }
-
-    100% {
-        transform: scale(0.05);
-        opacity: 0.1;
-        border-radius: 50%;
-
-    }
-
 }
 
 .float_html {
@@ -226,7 +172,6 @@
     animation-delay: 1s;
 
 }
-
 
 
 @keyframes float {

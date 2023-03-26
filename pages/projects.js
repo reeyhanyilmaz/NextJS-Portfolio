@@ -33,7 +33,7 @@ export default function Projects() {
       <p className="html">&lt;html&gt;</p>
       <p className="body">&lt;body&gt;</p>
       <p className="section">&lt;section&gt;</p>
-      <div className="content">
+      <div className="content_projects">
         <div className="row">
           {data.map((item, index) => (
             <div key={index} className="col m4 hover:transform hover:scale-105">

@@ -15,7 +15,7 @@ export default function Home() {
         <title>Reyhan Yılmaz</title>
       </Head>
 
-      <div id="about" className="content">
+      <div className="content">
         <p className="html">&lt;html&gt;</p>
         <p className="body">&lt;body&gt;</p>
         <div className="infoContainer">

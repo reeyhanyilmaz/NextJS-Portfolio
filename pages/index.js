@@ -3,8 +3,10 @@ import Head from "next/head";
 import "../styles/index.css";
 import { useSelector } from "react-redux";
 
-export default function Home() {
+export default function Home({isMobile}) {
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
+
+  console.log('isMobile :>> ', isMobile);
 
   return (
     <div
@@ -21,11 +23,11 @@ export default function Home() {
         <div className="infoContainer">
           <div className="devInfo">
             <p className="h1">&lt;h1&gt;</p>
-            <div className="hello slideLeft">Hi, I&#39;m Reyhan</div>
-            <div className="about slideLeft">Frontend Developer</div>
+            <div className="hello slideLeft ">Hi, I&#39;m Reyhan</div>
+            <div className="about slideLeft ">Frontend Developer</div>
             <p className="h1">&lt;h1 /&gt;</p>
             <p className="p mt-5">&lt;p&gt;</p>
-            <div className="moreAbout slideLeft md:w-[600px]">
+            <div className="moreAbout md:w-[600px] slideLeft">
               <p>
                 I finished my undergraduate education as a chemist. I became a
                 frontend developer by making a career change. I am currently
@@ -49,8 +51,8 @@ export default function Home() {
             </div>
             <p className="p mt-5">&lt;p /&gt;</p>
           </div>
-          
-          <div className="devPic slideLeft mt-5 flex justify-content ">
+
+          <div className={`devPic mt-5 flex justify-content slideLeft ${isMobile ? "" : "slideLeft"}`}>
             <Image
               src="/assets/picture.jpeg"
               alt="my_photo"
@@ -65,3 +67,12 @@ export default function Home() {
     </div>
   );
 }
+
+
+//ssr oldugu için bu şekilde çekmeliyiz
+Home.getInitialProps = ({ req }) => {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    req ? req.headers['user-agent'] : navigator.userAgent
+  );
+  return { isMobile };
+};

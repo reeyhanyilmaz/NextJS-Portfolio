@@ -17,7 +17,6 @@ function AbTest() {
       </Head>
       <div className="blog-content">
         <h1>How to Create an A/B Test Using JavaScript</h1>
-        <br />
 
         <h2>What is JavaScript?</h2>
 

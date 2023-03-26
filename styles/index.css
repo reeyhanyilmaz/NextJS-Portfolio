@@ -118,7 +118,7 @@
     /* mobile'da yavaşlattım */
     /* Animation */
     .slideLeft {
-        animation: slide-left 0.5s linear forwards;
+        animation: slide-left 0s linear forwards;
     }
 
     @keyframes slide-left {
@@ -136,15 +136,15 @@
     /* delay */
     .hello.slideLeft,
     .devPic.slideLeft {
-        animation-delay: 0.2s !important;
+        animation-delay: 0s !important;
     }
 
     .about.slideLeft {
-        animation-delay: 0.5;
+        animation-delay: 0s;
     }
 
     .moreAbout.slideLeft {
-        animation-delay: 1;
+        animation-delay: 0s;
     }
 
     /* slide end */

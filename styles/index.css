@@ -3,7 +3,6 @@
 
 .infoContainer {
     display: flex;
-    justify-content: space-around;
     font-family: 'Comic Neue', cursive;
 }
 
@@ -38,17 +37,18 @@
     opacity: 0;
 }
 
-@media only screen and (width > 1200px) {
+@media only screen and (max-width: 1200px) {
     .moreAbout {
         margin-left: 8rem;
     }
 
     .infoContainer{
         padding: 20px 10px;
+        justify-content: space-around;
     }
 }
 
-@media only screen and (width < 768px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
     .content{
         padding: 20px 10px 0 10px;
     }
@@ -73,6 +73,7 @@
     }
 
     .infoContainer {
+        display: flex;
         flex-direction: column !important;
     }
 

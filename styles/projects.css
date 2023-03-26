@@ -16,16 +16,16 @@
   font-weight: 600;
 }
 
-@media only screen and (width < 768px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
 
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .row .col {
-    width: 400px;
+    width: 400px !important;
   }
 }
 

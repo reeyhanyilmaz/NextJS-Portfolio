@@ -52,7 +52,7 @@ function Navbar() {
           </Link>
         </li>
         <li onClick={handleClick}>
-          <i className="fa-duotone fa-feather mr-3"></i>
+          <i className="fa-solid fa-pen mr-3"></i>
           <Link href="/blog">
             <p> .blog() </p>
           </Link>

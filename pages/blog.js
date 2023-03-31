@@ -18,7 +18,7 @@ function Blog() {
       >
         <p className="html">&lt;html&gt;</p>
         <p className="body">&lt;body&gt;</p>
-        <p className="section">&lt;section&gt;</p>
+        <p className="sectionn">&lt;section&gt;</p>
         {/* postcss */}
         <div className="content-wrapper">
           <div className="news-card">
@@ -74,7 +74,7 @@ function Blog() {
             </div>
           </div>
         </div>
-        <p className="section">&lt;section/&gt;</p>
+        <p className="sectionn">&lt;section/&gt;</p>
         <p className="body">&lt;body /&gt;</p>
         <p className="html">&lt;html/&gt;</p>
       </div>

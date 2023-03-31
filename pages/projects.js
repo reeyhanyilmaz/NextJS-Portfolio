@@ -4,11 +4,11 @@ import { useSelector } from "react-redux";
 import { Icon } from "@iconify/react";
 import "../styles/projects.css";
 import { useState } from "react";
-import { data } from "../data.json";
 
 export default function Projects() {
   const [activeCard, setActiveCard] = useState(null);
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
+  const data = useSelector((state) => state.portfolio.data); //state
 
   function handleCardClick(index) {
     setActiveCard(index === activeCard ? null : index);
@@ -32,20 +32,22 @@ export default function Projects() {
       </Head>
       <p className="html">&lt;html&gt;</p>
       <p className="body">&lt;body&gt;</p>
-      <p className="section">&lt;section&gt;</p>
+      <p className="sectionn">&lt;section&gt;</p>
+      <p class="sectionn mt-5 mb-5">&#91; &#123;</p>
+
       <div className="content_projects">
         <div className="row">
-          {data.map((item, index) => (
+          {data.data.map((item, index) => (
             <div key={index} className="col m4 hover:transform hover:scale-105">
               <div
                 className="card hoverable"
                 onClick={() => handleCardClick(index)}
               >
-                <div id="projects_card" className="card-image waves-effect waves-block waves-light">
-                  <img
-                    className="activator"
-                    src={item.image}
-                  />
+                <div
+                  id="projects_card"
+                  className="card-image waves-effect waves-block waves-light"
+                >
+                  <img className="activator" src={item.image} />
                 </div>
                 <div className="card-content">
                   <StackIcons data={item.stack} />
@@ -87,7 +89,8 @@ export default function Projects() {
           ))}
         </div>
       </div>
-      <p className="section">&lt;section/&gt;</p>
+      <p class="sectionn mb-5">&#125; &#93;</p>
+      <p className="sectionn">&lt;section/&gt;</p>
       <p className="body">&lt;body /&gt;</p>
       <p className="html">&lt;html/&gt;</p>
     </div>

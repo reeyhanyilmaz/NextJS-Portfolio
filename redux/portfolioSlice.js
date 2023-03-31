@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import data from "../public/data.json";
 
 export const portfolioSlice = createSlice({
   name: "portfolio",
   //state
   initialState: {
     isHamOpen: false,
+    data: data,
   },
   //fonksiyon
   reducers: {

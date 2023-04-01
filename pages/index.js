@@ -7,15 +7,15 @@ import { useState, useEffect } from "react";
 
 const TypeWriter = ({ text }) => {
   const [index, setIndex] = useState(0);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIndex((prevIndex) => prevIndex + 1);
     }, 100); // 100ms gecikme süresi
-  
+
     return () => clearTimeout(timer);
   }, [index]);
-  
+
   return <div>{text.slice(0, index)}</div>;
 };
 
@@ -23,10 +23,7 @@ export default function Home({ isMobile }) {
   const isHamOpen = useSelector((state) => state.portfolio.isHamOpen); //state
 
   return (
-    <div
-      id="about"
-      className={`container py-20 min-w-full ${isHamOpen ? "open" : "close"}`}
-    >
+    <div id="about" className={`container py-20 min-w-full`}>
       <Head>
         <title>Reyhan Yılmaz</title>
       </Head>
@@ -37,11 +34,19 @@ export default function Home({ isMobile }) {
         <div className="infoContainer">
           <div className="devInfo">
             <p className="h1">&lt;h1&gt;</p>
-            <div className="hello slideLeft"> 
-            {isMobile ?  <TypeWriter text="Hi, I&#39;m Reyhan" />: "Hi, I am Reyhan"}
-            </div>         
+            <div className="hello slideLeft">
+              {isMobile ? (
+                <TypeWriter text="Hi, I&#39;m Reyhan" />
+              ) : (
+                "Hi, I am Reyhan"
+              )}
+            </div>
             <div className="about md:w-[600px] slideLeft">
-              {isMobile ?  <TypeWriter text="Frontend Developer" /> : "Frontend Developer"}        
+              {isMobile ? (
+                <TypeWriter text="Frontend Developer" />
+              ) : (
+                "Frontend Developer"
+              )}
             </div>
             <p className="h1">&lt;h1 /&gt;</p>
             <p className="p mt-5">&lt;p&gt;</p>

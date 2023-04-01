@@ -17,9 +17,7 @@ export default function Projects() {
   return (
     <div
       id="portfolio"
-      className={`flex flex-col justify-center align-center container ${
-        isHamOpen ? "open" : "close"
-      }`}
+      className={`flex flex-col justify-center align-center container`}
     >
       <Head>
         {/* sunucu tarafında çalıştırılan JavaScript kodunun, bir tarayıcı ortamı gerektiren Materialize kütüphanesi gibi istemci tarafı bir kütüphane ile uyumsuz olduğundan bu şekilde kullandım. */}

@@ -12,10 +12,7 @@ function Blog() {
       <Head>
         <title>Blog</title>
       </Head>
-      <div
-        id="blog"
-        className={`container py-20 min-w-full ${isHamOpen ? "open" : "close"}`}
-      >
+      <div id="blog" className={`container py-20 min-w-full`}>
         <p className="html">&lt;html&gt;</p>
         <p className="body">&lt;body&gt;</p>
         <p className="sectionn">&lt;section&gt;</p>
@@ -46,7 +43,10 @@ function Blog() {
           </div>
 
           <div className="news-card">
-            <a href="https://medium.com/@hakanolgun/universal-links-for-react-native-cli-f0a1c87360f1" className="news-card__card-link"></a>
+            <a
+              href="https://medium.com/@hakanolgun/universal-links-for-react-native-cli-f0a1c87360f1"
+              className="news-card__card-link"
+            ></a>
             <img
               src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
               alt="reac-native"

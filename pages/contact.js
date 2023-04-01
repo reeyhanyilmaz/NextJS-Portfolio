@@ -110,10 +110,8 @@ export default function Contact() {
 
   return (
     <div
-    id="contact_page"
-      className={` contect flex flex-col py-20 justify-center align-center min-w-full container ${
-        isHamOpen ? "open" : "close"
-      }`}
+      id="contact_page"
+      className="contect flex flex-col py-20 justify-center align-center min-w-full container"
     >
       <Head>
         <title>Contact</title>
@@ -136,8 +134,10 @@ export default function Contact() {
               </p>
               <div className="form-input-grid">
                 <div>
-                 
-                  <p className="form-text">  <Icon icon="uil:user" className="icon" /> Username*</p>
+                  <p className="form-text">
+                    {" "}
+                    <Icon icon="uil:user" className="icon" /> Username*
+                  </p>
                   <div className="form-input-wrapper flexbox-left">
                     <input
                       className="form-input"
@@ -156,7 +156,8 @@ export default function Contact() {
 
                 <div>
                   <p className="form-text">
-                  <Icon icon="uil:at" className="icon" /> Email*</p>
+                    <Icon icon="uil:at" className="icon" /> Email*
+                  </p>
                   <div className="form-input-wrapper flexbox-left">
                     <input
                       className="form-input"
@@ -175,8 +176,10 @@ export default function Contact() {
               </div>
 
               <div>
-                
-                <p className="form-text"><Icon icon="uil:comment-alt-heart" className="icon" /> Message* (Min 10 characters)</p>
+                <p className="form-text">
+                  <Icon icon="uil:comment-alt-heart" className="icon" />{" "}
+                  Message* (Min 10 characters)
+                </p>
                 <div
                   id="textarea"
                   className="form-input-wrapper flexbox-left-start"
@@ -202,7 +205,10 @@ export default function Contact() {
                   type="submit"
                   className="button btn-primary flex flex-row justify-center items-center text-xl font-bold"
                 >
-                  <Icon icon="uil:envelope-heart" className="text-4xl mr-3 button_icon" />
+                  <Icon
+                    icon="uil:envelope-heart"
+                    className="text-4xl mr-3 button_icon"
+                  />
                   {isSubmitting ? "Sending..." : "Submit"}
                   <div className="btn-secondary"></div>
                 </button>

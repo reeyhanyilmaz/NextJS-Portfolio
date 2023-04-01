@@ -32,33 +32,6 @@ function Navbar() {
       ></i>
       <div className="circle"></div>
 
-      <ul>
-        <li onClick={handleClick}>
-          <i className="fa-solid fa-house mr-3"></i>
-          <Link href="/">
-            <p> .about() </p>
-          </Link>
-        </li>
-        <li onClick={handleClick}>
-          <i className="fa-solid fa-user mr-3"></i>
-          <Link href="/projects">
-            <p> .projects() </p>
-          </Link>
-        </li>
-        <li onClick={handleClick}>
-          <i className="fa-solid fa-envelope mr-3"></i>
-          <Link href="/contact">
-            <p> .contact() </p>
-          </Link>
-        </li>
-        <li onClick={handleClick}>
-          <i className="fa-solid fa-pen mr-3"></i>
-          <Link href="/blog">
-            <p> .blog() </p>
-          </Link>
-        </li>
-      </ul>
-
       {/* contact */}
       <div id="contact" className={`icons ${isHamOpen ? "open" : "close"}`}>
         <SocialIcon url="https://linkedin.com/in/reeyhanyilmaz" />

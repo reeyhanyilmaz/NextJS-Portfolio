@@ -212,7 +212,7 @@ export default function Contact() {
         </main>
         <p className="form">&lt;form /&gt;</p>
         <p className="body">&lt;body /&gt;</p>
-        <p className="html">&lt;html/&gt;</p>
+        <p className="html">&lt;html /&gt;</p>
 
         <Modal
           onClose={handleClose}

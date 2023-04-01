@@ -90,9 +90,9 @@ export default function Projects() {
         </div>
       </div>
       <p class="sectionn mb-5">&#125; &#93;</p>
-      <p className="sectionn">&lt;section/&gt;</p>
+      <p className="sectionn">&lt;section /&gt;</p>
       <p className="body">&lt;body /&gt;</p>
-      <p className="html">&lt;html/&gt;</p>
+      <p className="html">&lt;html /&gt;</p>
     </div>
   );
 }

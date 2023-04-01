@@ -25,6 +25,7 @@ function Blog() {
             <a
               href="https://medium.com/@reyhanylmz1993/creating-a-project-with-next-js-and-its-advantages-517be757259f"
               className="news-card__card-link"
+              target="_blank"
             ></a>
             <img
               src="https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80"

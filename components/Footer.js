@@ -14,26 +14,26 @@ const Footer = () => {
   return (
     <ul className={`menu_ul ${isHamOpen && "menu_ul-active"}`}>
       <li onClick={handleMenuItemClick}>
-        <i className="fa-solid fa-house mr-3"></i>
         <Link href="/">
+          <i className="fa-solid fa-house mr-3"></i>
           <p> .about() </p>
         </Link>
       </li>
       <li onClick={handleMenuItemClick}>
-        <i className="fa-solid fa-user mr-3"></i>
         <Link href="/projects">
+          <i className="fa-solid fa-user mr-3"></i>
           <p> .projects() </p>
         </Link>
       </li>
       <li onClick={handleMenuItemClick}>
-        <i className="fa-solid fa-envelope mr-3"></i>
         <Link href="/contact">
+          <i className="fa-solid fa-envelope mr-3"></i>
           <p> .contact() </p>
         </Link>
       </li>
       <li onClick={handleMenuItemClick}>
-        <i className="fa-solid fa-pen mr-3"></i>
         <Link href="/blog">
+          <i className="fa-solid fa-pen mr-3"></i>
           <p> .blog() </p>
         </Link>
       </li>

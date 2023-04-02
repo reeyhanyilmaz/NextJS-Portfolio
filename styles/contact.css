@@ -204,7 +204,7 @@ textarea::-webkit-scrollbar-thumb {
 .button,
 .btn-secondary {
     margin: 0;
-    width: 20%;
+    width: 140px;
     position: relative;
     padding: .7em 1.3em;
     letter-spacing: .1em;

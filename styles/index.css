@@ -48,16 +48,12 @@
     opacity: 0;
 }
 
-.devPic {
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+.devPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.devPic .img {
-    border-radius: 50%;
-    padding: 20px;
-}
 
 @media screen and (max-width: 1920px) {
     .moreAbout {
@@ -93,6 +89,15 @@
 
     .moreAbout.slideLeft {
         animation-delay: 1.5s;
+    }
+
+    .devPic .img {
+        border-radius: 50%;
+        padding: 20px;
+        height: 400px;
+        width: 400px;
+        background-color: white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     /* slide end desktop */
@@ -156,6 +161,16 @@
     }
 
     /* slide end */
+
+
+.devPic .img {
+    border-radius: 50%;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 }
 
 

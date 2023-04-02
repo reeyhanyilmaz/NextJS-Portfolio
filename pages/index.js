@@ -101,7 +101,7 @@ export default function Home({ isMobile }) {
               isMobile ? "" : "slideLeft"
             }`}
           >
-            <Image
+            <img
               src="/assets/picture.jpeg"
               alt="my_photo"
               width="500"

@@ -178,6 +178,7 @@ textarea::-webkit-scrollbar-thumb {
     background-color: var(--bc-gray) !important;
     border: 2px solid var(--bc-gray) !important;
     transition: border .15s ease-in-out !important;
+    font-family: var(--font-main);
 }
 
 .form-input:hover {
@@ -214,21 +215,11 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 50px;
     border: none;
     cursor: pointer;
+    font-family: var(--font-main);
     transform: scaleX(1);
     transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), filter .3s cubic-bezier(.175, .885, .32, 1.275), bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275), -webkit-filter .3s cubic-bezier(.175, .885, .32, 1.275);
 }
 
-.button {
-    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), bottom .3s cubic-bezier(.175, .885, .32, 1.275), background-position 3s cubic-bezier(.455, .03, .515, .955), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-
-.button,
-.button .btn-secondary {
-    background-position: 0 50%;
-    bottom: 0;
-    width: 160px;
-    font-weight: 600;
-}
 
 .button .btn-secondary {
     left: 0;

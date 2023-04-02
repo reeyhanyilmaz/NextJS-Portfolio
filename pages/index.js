@@ -65,8 +65,9 @@ export default function Home({ isMobile }) {
                 I&#39;m developing projects with React, Next JS, TypeScript. I
                 am using Redux in state management. I also use API services in
                 the projects I develop. As styling, I use Styled Components ,
-                Bootstrap, Tailwind CSS , SCSS, Chakra-UI and many libraries. I
-                started learning in React Native and am developing it.
+                Bootstrap, Tailwind CSS , SCSS, Chakra-UI and many libraries.
+                Now, I started mobile application development with React Native.
+                developing it.
               </p>
             </div>
             <p className="p mt-5">&lt;p /&gt;</p>

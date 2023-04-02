@@ -77,7 +77,7 @@ function Blog() {
             </div>
           </div>
         </div>
-        <p className="sectionn">&lt;section/&gt;</p>
+        <p className="sectionn">&lt;section /&gt;</p>
         <p className="body">&lt;body /&gt;</p>
         <p className="html">&lt;html /&gt;</p>
       </div>

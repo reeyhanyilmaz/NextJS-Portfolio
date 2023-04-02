@@ -104,8 +104,6 @@ export default function Home({ isMobile }) {
             <img
               src="/assets/picture.jpeg"
               alt="my_photo"
-              width="500"
-              height="200"
               className="img"
             />
           </div>

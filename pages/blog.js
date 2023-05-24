@@ -39,12 +39,12 @@ function Blog() {
               <div className="news-card__post-date">Apr 1, 2023</div>
               <div className="news-card__details-wrapper">
                 <p className="news-card__excerpt">
-                  In this article, we will see how to set up Universal Links for
-                  iOS devices in projects using React Native CLI and React
-                  Navigation.
+                  Next JS is a popular open-source JavaScript framework that is
+                  built on top of React. React proposes to create projects with
+                  Next JS in its new version.
                 </p>
                 <a
-                  href="https://medium.com/@hakanolgun/universal-links-for-react-native-cli-f0a1c87360f1"
+                  href="https://medium.com/@reyhanylmz1993/creating-a-project-with-next-js-and-its-advantages-517be757259f"
                   className="news-card__read-more"
                   target="_blank"
                 >
@@ -55,7 +55,7 @@ function Blog() {
           </div>
           <div className="news-card">
             <Link href="/ab-test" className="news-card__card-link"></Link>
-            <img       
+            <img
               src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2805&q=80"
               alt="ab-test"
               className="news-card__image"
